@@ -1,0 +1,372 @@
+body {
+  background: #F2F2F2;
+}
+#header {
+  width: 100%;
+  height: 72px;
+  padding-top: 11px;
+  background: #fff;
+}
+.w1190 {
+  width: 1190px;
+  margin: 0 auto;
+}
+.logo {
+
+}
+#header .logo img {
+  width: 280px;
+  height: 50px;
+  float: left;
+}
+#header .logo p {
+  float: right;
+  line-height: 50px;
+  font-family:PingFangSC-Regular;
+  font-size:14px;
+  color:#4a4a4a;
+}
+#nav {
+  width: 100%;
+  height: 60px;
+  background: #000843;
+  border-bottom: 2px solid #D56012;
+}
+#nav .nav a {
+  float: left;
+  line-height: 60px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 20px;
+}
+#poster {
+  width: 100%;
+  height: 500px;
+  background: #000843;
+}
+.poster {
+  height: 500px;
+  background: url(../i/poster.png) right no-repeat;
+}
+.poster p {
+  padding-top: 140px;
+  padding-bottom: 22px;
+  line-height: 50px;
+  color: #fff;
+  font-family:PingFangSC-Medium;
+  font-size:40px;
+}
+.poster a {
+  border: 1px solid #fff;
+  height: 38px;
+  float: left;
+  padding: 0 22px;
+  line-height: 36px;
+  font-family:PingFangSC-Light;
+  font-size:20px;
+  color:#ffffff;
+}
+#subnav {
+  background: #cecece;
+}
+.subnav {
+  height: 120px;
+}
+.subnav a {
+  width: 170px;
+  height: 120px;
+  float: left;
+  background: url(../i/back_icon1.png) no-repeat;
+}
+.subnav a:nth-child(even) {
+  background: url(../i/back_icon2.png) no-repeat;
+}
+.subnav a .title{
+  padding-left: 20px;
+  padding-top: 32px;
+  line-height: 16px;
+  font-weight: bold;
+  font-family:PingFangSC-Medium;
+  font-size:16px;
+  color:#4a4a4a;
+}
+.subnav a .desc{
+  padding-left: 20px;
+  line-height: 24px;
+  font-family:PingFangSC-Light;
+  font-size:14px;
+  color:#4a4a4a;
+}
+.body {
+  background: #F2F2F2;
+}
+.bd > .title {
+  height: 70px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: bold;
+  font-family:PingFangSC-Medium;
+  font-size:24px;
+  color:#4a4a4a;
+}
+.body .bd > .title {
+  height: 76px;
+}
+.bd.self > .title {
+  height: 89px;
+  line-height: 108px;
+}
+
+.services {
+
+}
+.service {
+  width: 358px;
+  height: 100%;
+  float: left;
+  border: 1px solid #c2c2c2;
+  margin-left: -1px;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
+.service.center {
+  width: 464px;
+}
+.service.cur {
+  border: 2px solid #DB6113;
+  z-index: 2;
+}
+.service div.title {
+  text-align: center;
+  height: 135px;
+  background: #ebebec;
+}
+.service:nth-child(even) div.title {
+  background: #e5e6e6;
+}
+.service.cur div.title {
+  height: 134px;
+  /*background: #DB6113;
+  color: #fff;*/
+}
+/*
+.service.cur div.title .desc {
+  color: #fff;
+}
+*/
+.service .title img {
+  margin-top: 20px;
+}
+.service .title .title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.service > img {
+  margin: 20px;
+  width:320px;
+}
+.service.center > img {
+  margin: 20px;
+  width:420px;
+}
+.service p.desc {
+  padding: 0 20px 20px 20px;
+  color: #999;
+  font-size: 14px;
+  line-height: 18px;
+}
+.service div.title:nth-child(even) {
+  background: #e6e6e6;
+}
+.leg {
+  background: #fff;
+}
+.news {
+  height: 407px;
+}
+.news .col {
+  float: left;
+}
+.news .col1 {
+  width: 500px;
+  height: 375px;
+  margin-right: 20px;
+}
+.news .col2 {
+  width: 410px;
+  height: 375px;
+}
+.news .col3 {
+  float: right;
+  width: 240px;
+  height: 375px;
+}
+.news .col2 .row {
+  background:#f6f6f6;
+  width:410px;
+  height:180px;
+  overflow: hidden;
+  padding: 0 11px;
+}
+.news .col2 .row:first-child {
+  margin-bottom: 15px;
+}
+.news .col2 .desc {
+  font-family:PingFangSC-Light;
+  font-size:14px;
+  color:#4a4a4a;
+  line-height: 20px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.news .col2 .desc:first-child {
+  margin-top: 17px;
+}
+.news .col3 img {
+  display: block;
+  width: 240px;
+  height: 180px
+}
+.news .col3 img:first-child{
+  margin-bottom: 15px;
+}
+#slides {
+  height: 407px;
+  overflow: hidden;
+  position: relative;
+}
+.pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  list-style: none;
+  -moz-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.pagination li {
+  text-indent: -99px;
+  overflow: hidden;
+  float: left;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  background: #66605b;
+  margin: 0 5px;
+  opacity: 0.5;
+}
+
+.pagination li.current {
+  background: #e47616;
+  opacity: 1;
+}
+.about {
+  background: #939393;
+}
+.about .w1190 {
+  position: relative;
+}
+.about .we {
+  width: 1190px;
+  height: 320px;
+  -background: url(../i/about.png) no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.about .we div.clearfix {
+  width: 1488px;
+  position: relative;
+  overflow: hidden;
+}
+.about .we img {
+  float: left;
+  height: 320px;
+}
+.about .we img:last-child {
+  width: 298px;
+}
+.about .left {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  width: 32px;
+  height: 48px;
+  margin-top: -24px;
+  background: url(../i/left.png) no-repeat;
+}
+.about .right {
+  position: absolute;
+  top: 50%;
+  width: 32px;
+  height: 48px;
+  margin-top: -24px;
+  right: -40px;
+  background: url(../i/right.png) no-repeat;
+}
+.partner div div {
+  width: 1190px;
+  height: 80px;
+  background: url(../i/partner.png) no-repeat;
+}
+.biz div div {
+  width: 1190px;
+  height: 80px;
+  background: url(../i/biz.png) no-repeat;
+}
+.biz {
+  margin-bottom: 76px;
+}
+.footer {
+  background: #313452;
+  color: #fff;
+  padding-bottom: 100px;
+}
+.footer div div {
+  float: left;
+}
+.contact {
+  width: 420px;
+  padding-left: 90px;
+}
+.email,
+.addr,
+.web {
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 6px;
+}
+.email {
+  background: url(../i/mail.png) left no-repeat;
+}
+.addr {
+  background: url(../i/addr.png) left no-repeat;
+}
+.web {
+  background: url(../i/web.png) left no-repeat;
+}
+.footer div div .title {
+  height: 90px;
+  line-height: 90px;
+}
+.aboutus {
+  width: 365px;
+  padding-right: 48px;
+}
+.aboutus .desc {
+  font-size: 12px;
+  line-height: 24px;
+}
+.webnav {
+  width: 160px;
+}
+.webnav .desc {
+  font-size: 12px;
+  line-height: 24px;
+}
+.qr img {
+  margin-top: 55px;
+}
