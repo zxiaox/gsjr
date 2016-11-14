@@ -11,5 +11,16 @@ $(function(){
   });
   $('.right').click(function(){
     $('.we .clearfix').css('left', '-298px');
-  })
+  });
+  $('#nav li>a').hover(function(){
+    $(this).addClass('mouse');
+  },function(){
+    $(this).removeClass('mouse');
+  });
+  $('.work').hover(function(){
+    //$('.subnav_work').css('left', ($(this).offset().left));
+    $('.subnav_work').show();
+  },function(){
+    $('.subnav_work').hide();
+  });
 })

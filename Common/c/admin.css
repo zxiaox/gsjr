@@ -1,0 +1,35 @@
+.gsjz{
+	min-width:320px;
+	max-width:750px;
+	margin:0 auto;
+}
+.adminTitle{
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 36px;
+  color: #00BC4A;
+  text-shadow: 1px 1px 4px #aeaeae;
+}
+.adminformrow{
+  padding: 0.8em;
+  color: #666;
+}
+.adminformrow label{
+  display: inline-block;
+    width: 40%;
+    text-align: right;
+    margin-right:1em;
+}
+.adminformrow input{
+  border:none;
+  border-bottom:1px #aaa solid;
+  padding-left:1em;
+}
+.sign_in{
+  background: #00BC4A;
+  border: none;
+  color: #fff;
+  padding: 0.2em 1em;
+  margin-left: 75%;
+}
