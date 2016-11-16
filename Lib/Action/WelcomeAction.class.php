@@ -17,9 +17,11 @@ class WelcomeAction extends Action {
   	$this->display();
   }
   public function us(){
+    $this->assign('us', 'cur');
   	$this->display();
   }
   public function hr(){
+    $this->assign('hr', 'cur');
   	$this->display();
   }
 }

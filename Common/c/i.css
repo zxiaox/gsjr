@@ -438,7 +438,7 @@ body {
 .qr img {
   margin-top: 55px;
 }
-.product, .newcenter {
+.product, .newcenter, .us {
   padding-bottom: 49px;
   background: #fff;
 }
@@ -532,6 +532,7 @@ body {
   font-family:PingFangSC-Medium;
   font-size:14px;
   color:#4a4a4a;
+  padding: 6px 0;
 }
 .detail .rel .desc{
   font-family:PingFangSC-Regular;
@@ -617,4 +618,62 @@ body {
   background: #ed6a1a;
   top:0;
   left:0;
+}
+.us_bg {
+  width: 100%;
+  height: 340px;
+  background-image: url(../i/us_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.us_nav {
+  position: relative;
+  padding-left: 320px;
+  background:#ffffff;
+  box-shadow:0 2px 2px 0 rgba(235,235,235,0.50);
+}
+.us_nav ul{
+  height: 70px;
+  overflow: hidden;
+}
+.us_nav li {
+  float: left;
+  width: 100px;
+  line-height: 70px;
+  padding: 0 15px;
+  font-family:PingFangSC-Regular;
+  font-size:16px;
+  color:#000000;
+}
+.us_theme {
+  position: absolute;
+  top: -309px;
+  left: 0;
+  background-image:linear-gradient(-180deg, #48b7ff 0%, #6a93ff 100%);
+  width:320px;
+  height:380px;
+}
+.us_theme p:first-child {
+  font-family:PingFangSC-Medium;
+  font-size:40px;
+  color:#ffffff;
+  text-align: center;
+  padding-top: 30px;
+}
+.us_theme p:nth-child(2) {
+  font-family:PingFangSC-Regular;
+  font-size:17px;
+  color:#ffffff;
+  text-align: center;
+}
+.us_theme p:nth-child(3) {
+  border:3px solid #ffffff;
+  width:244px;
+  height:154px;
+  font-family:PingFangSC-Regular;
+  font-size:14px;
+  color:#ffffff;
+  margin: 78px auto 0;
+  padding: 20px;
+  line-height: 26px;
 }
