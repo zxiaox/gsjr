@@ -5,6 +5,8 @@ $(function(){
   $('.service').hover(function(){
     $('.service').removeClass('cur');
     $(this).addClass('cur');
+    $('.service .title > img').attr('src','/Common/i/s1.png');
+    $('.service.cur .title > img').attr('src','/Common/i/s1bg.png');
   });
   $('.left').click(function(){
     $('.we .clearfix').css('left', '0');
@@ -22,5 +24,9 @@ $(function(){
     $('.subnav_work').show();
   },function(){
     $('.subnav_work').hide();
+  });
+  $('.us_nav li').click(function(){
+    $('.us_nav li').removeClass('cur');
+    $(this).addClass('cur');
   });
 })

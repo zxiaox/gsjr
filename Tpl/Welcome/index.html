@@ -1,37 +1,59 @@
 <include file="./Tpl/Welcome/h.html"/>
-  <div id="poster">
-    <div class="w1190 poster">
-      <p>让小微企业融资更简单</p>
-      <a href="/Welcome/work?type=7">立即查看</a>
+
+  <div id="slidesBanner">
+    <div class="slides_container tab-content">
+      <div class="tab-pannel">
+        <div class="posterBox">
+          <div class="w1190 poster">
+            <p>让小微企业融资更简单</p>
+            <a href="/Welcome/work?type=7">立即查看</a>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pannel">
+        <div class="posterBox">
+          <div class="w11901">
+            <a href="/Welcome/work?type=7" id="poster1"><img src="../Common/i/banner1.jpg" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pannel">
+        <div class="posterBox">
+          <div class="w11901">
+            <a href="/Welcome/work?type=7" id="poster2"><img src="../Common/i/banner2.jpg" /></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
   <div id="subnav">
     <div class="w1190 clearfix subnav">
-      <a href="javascript:void(0);">
+      <a href="/Welcome/work?type=7">
         <p class="title">融资担保</p>
         <p class="desc">信用担保机构</p>
       </a>
-      <a href="javascript:void(0);">
+      <a href="/Welcome/work?type=6">
         <p class="title">小额贷款</p>
         <p class="desc">国有法人机构</p>
       </a>
-      <a href="javascript:void(0);">
+      <a href="/Welcome/work?type=5">
         <p class="title">互联网金融</p>
         <p class="desc">国有互联网投资平台</p>
       </a>
-      <a href="javascript:void(0);">
+      <a href="/Welcome/work?type=4">
         <p class="title">资产管理</p>
         <p class="desc">现代金融服务企业</p>
       </a>
-      <a href="javascript:void(0);">
+      <a href="/Welcome/work?type=3">
         <p class="title">典当业务</p>
         <p class="desc">国有典当公司</p>
       </a>
-      <a href="javascript:void(0);">
-        <p class="title">融资租赁</p>
+      <a href="/Welcome/work?type=2">
+        <p class="title">金融仓储</p>
         <p class="desc">信用担保机构</p>
       </a>
-      <a href="javascript:void(0);">
+      <a href="/Welcome/work?type=1">
         <p class="title">投资基金</p>
         <p class="desc">信用担保机构</p>
       </a>
@@ -61,6 +83,21 @@
           <script type="text/javascript" src="http://g.tbcdn.cn/kissy/m/0.2.1/mini-full.js"></script>
           <script>
             KISSY.use('gallery/slide/1.3/index',function(S,Slide){
+              B = new Slide('slidesBanner',{
+                autoSlide:true,
+                hoverStop:true,
+                effect:'hSlide',
+                timeout:3000,
+                speed:300,
+                invisibleStop:true,
+                eventType:'mouseover',
+                triggerDelay:400,
+                defaultTab:5,
+                selectedClass:'current',
+                carousel:true,
+                touchmove:true
+              //}).on('afterSwitch',function(){
+              });
               C = new Slide('slides',{
                 autoSlide:true,
                 hoverStop:true,
@@ -97,8 +134,8 @@
           </div>
         </div>
         <div class="col col3">
-          <img src="/Common/i/newcol3.png" >
-          <img src="/Common/i/newcol3.png" >
+          <img src="/Common/i/neweg3.jpg" >
+          <img src="/Common/i/neweg4.jpg" >
         </div>
       </div>
     </div>
@@ -119,7 +156,7 @@
         </div>
         <div class="service center cur">
           <div class="title">
-            <img src="/Common/i/s1.png">
+            <img src="/Common/i/s1bg.png">
             <p class="title">财富管理</p>
             <p class="desc">互联网投融资平台</p>
           </div>
@@ -146,8 +183,12 @@
     <div class="w1190">
       <div class="we">
         <div class="clearfix">
-          <img src="/Common/i/about.png">
-          <img src="/Common/i/hr.png">
+          <!--<img src="/Common/i/snav.png">-->
+          <a href="/Welcome/us"></a>
+          <a href="/Welcome/us"></a>
+          <a href="/Welcome/us"></a>
+          <a href="/Welcome/us"></a>
+          <a href="/Welcome/hr"></a>
         </div>
       </div>
       <div class="left"></div>
