@@ -723,7 +723,7 @@ body {
   z-index: 9;
 }
 .hr_main {
-
+  padding-bottom: 50px;
 }
 .hr_nav {
   float: left;
@@ -743,6 +743,7 @@ body {
   position: relative;
   background: #fff;
   z-index: 11;
+  box-shadow:0 2px 2px 0 rgba(218,218,218,0.50);
 }
 .hr_nav ul {
   padding: 0 20px;
