@@ -98,6 +98,14 @@ body {
 .subnav_work a:hover {
   background: #ed6a1a;
 }
+#banners {
+  width: 100%;
+  overflow: hidden;
+}
+#slidesBanner {
+  overflow: hidden;
+  position: relative;
+}
 #poster1 img, #poster2 img {
   width: 100%;
   height: 500px;
