@@ -299,6 +299,7 @@ body {
   color:#4a4a4a;
   line-height: 20px;
   margin-bottom: 12px;
+  cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -613,6 +614,7 @@ body {
   line-height:30px;
   padding-left: 8px;
   position: relative;
+  cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
