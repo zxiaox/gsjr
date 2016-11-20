@@ -24,4 +24,10 @@ class WelcomeAction extends Action {
     $this->assign('hr', 'cur');
   	$this->display();
   }
+  public function news_preview($id=1){
+    $one = M('news')->find($id);
+    $this->assign('news', 'cur');
+    $this->assign('one', $one);
+  	$this->display();
+  }
 }

@@ -7,18 +7,18 @@
   <link rel="stylesheet" href="../Common/c/admin.css" media="all"/>
 </head>
 <body>
-  <form class="gsjz">
+  <form class="gsjz" action="{:U('index')}" method="post">
     <div class="adminTitle">甘肃金融资本管理后台</div>
     <div class="adminformrow">
       <label class="label">用户名</label>
-      <input class="phone_field" type="text" placeholder="用户名" />
+      <input class="phone_field" type="text" name="user" placeholder="用户名/手机/邮箱" />
     </div>
     <div class="adminformrow">
       <label class="label">密码</label>
-      <input class="password_field" type="password" />
+      <input class="password_field" type="password" name="password" />
     </div>
     <div class="adminformrow">
-      <button class="sign_in">登陆</button>
+      <input class="sign_in" type="submit" value="登陆" />
     </div>
   </form>
 </body>

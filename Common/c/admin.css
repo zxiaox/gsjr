@@ -17,19 +17,99 @@
 }
 .adminformrow label{
   display: inline-block;
-    width: 40%;
-    text-align: right;
-    margin-right:1em;
+  width: 40%;
+  text-align: right;
+  margin-right:1em;
 }
-.adminformrow input{
+.adminformrow label + input{
   border:none;
   border-bottom:1px #aaa solid;
   padding-left:1em;
 }
-.sign_in{
+.sign_in, .addnew{
   background: #00BC4A;
   border: none;
   color: #fff;
-  padding: 0.2em 1em;
-  margin-left: 75%;
+  padding: 0.8em 4em;
+  margin-left: 40%;
+	text-align: center;
+}
+
+.admin {
+
+}
+.admin > .nav {
+	width: 250px;
+	height: 100%;
+	background: #000843;
+	position: fixed;
+}
+.admin > .content {
+	padding: 20px;
+	padding-left: 270px;
+}
+.nav .logo {
+	display: block;
+	width: 200px;
+	margin: 20px auto;
+}
+.nav > * {
+	color: #fff;
+	display: block;
+	text-align: center;
+	margin-bottom: 20px;
+	line-height: 26px;
+}
+.nav .welcome a {
+	color: #fff;
+	text-decoration: underline;
+}
+.content .title {
+	font-size: 26px;
+	padding: 20px 0;
+	position: relative;
+}
+.content .title:before {
+	content: '';
+	width: 1px;
+	border-left: 4px solid #000843;
+}
+.content > table {
+	width: 100%;
+	margin: 0 auto;
+}
+.content > table th {
+	line-height: 36px;
+}
+
+.content > table tr {
+	line-height: 30px;
+}
+.content > table tr:first-child {
+	border-bottom: 1px solid #999;
+}
+.content > table tr:nth-child(even) {
+	background: #e8e8e8;
+}
+.content > table tr:first-child:hover {
+	background: #fff;
+}
+.content > table tr:hover {
+	background: #ccc;
+}
+.content > table tr td:nth-child(1) {
+	text-indent: 1em;
+}
+.content > table tr td:nth-child(n+2) {
+	text-align: center;
+	vertical-align: middle;
+}
+.content > table tr td img {
+	display: block;
+	margin: 0 auto;
+	height: 30px;
+}
+.content .adminformrow label.label {
+	width: 10%;
+	text-align: left;
 }

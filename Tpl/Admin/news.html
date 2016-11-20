@@ -1,0 +1,38 @@
+<include file="./Tpl/Admin/h.html"/>
+  <include file="./Tpl/Admin/admin_nav.html"/>
+    <div class="content">
+      <p class="title">
+        发布新闻
+      </p>
+      <form action="/Admin/news" method="post">
+        <input type="hidden" value="{$edit['id']}" name="id" />
+        <div class="adminformrow">
+          <label class="label">新闻标题：</label>
+          <input type="text" name="title" placeholder="新闻标题" value="{$edit['title']}" />
+        </div>
+        <div class="adminformrow">
+          <label class="label">封面图片：</label>
+          <input type="text" name="theme" placeholder="新闻封面图URL(可为空)" value="{$edit['theme']}" />
+        </div>
+        <div class="adminformrow">
+          <label class="label">新闻分类：</label>
+          <select name="newstype">
+            <option value="1" <eq name="edit['type_id']" value="1">selected</eq>>集团动态</option>
+            <option value="2" <eq name="edit['type_id']" value="2">selected</eq>>党建工作</option>
+            <option value="3" <eq name="edit['type_id']" value="3">selected</eq>>行业资讯</option>
+            <option value="4" <eq name="edit['type_id']" value="4">selected</eq>>下载中心</option>
+          </select>
+        </div>
+        <script id="container" name="content" type="text/plain"><empty name="edit['content']">这里填写新闻内容<else />{$edit['content']}</empty></script>
+
+        <div class="adminformrow">
+          <input class="addnew" type="submit" value="<empty name="edit['id']">发布<else />更新</empty>" />
+        </div>
+        <script type="text/javascript" src="../ue1.4.3.3/ueditor.config.js"></script>
+        <script type="text/javascript" src="../ue1.4.3.3/ueditor.all.js"></script>
+        <script type="text/javascript">
+            var ue = UE.getEditor('container');
+        </script>
+      </form>
+    </div>
+<include file="./Tpl/Admin/f.html"/>

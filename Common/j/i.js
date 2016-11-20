@@ -29,4 +29,4 @@ $(function(){
     $('.us_nav li').removeClass('cur');
     $(this).addClass('cur');
   });
-})
+});
