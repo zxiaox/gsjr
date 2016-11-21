@@ -2,7 +2,11 @@
   <include file="./Tpl/Admin/admin_nav.html"/>
     <div class="content">
       <p class="title">
-        发布新闻
+        <if condition="$edit['id']">
+          编辑新闻
+        <else />
+          发布新闻
+        </if>
       </p>
       <form action="/Admin/news" method="post">
         <input type="hidden" value="{$edit['id']}" name="id" />

@@ -14,16 +14,12 @@ $(function(){
   $('.right').click(function(){
     $('.we .clearfix').css('left', '-298px');
   });
-  $('#nav li>a').hover(function(){
-    $(this).addClass('mouse');
-  },function(){
-    $(this).removeClass('mouse');
-  });
   $('.work').hover(function(){
-    //$('.subnav_work').css('left', ($(this).offset().left));
-    $('.subnav_work').show();
+    $(this).children('a').addClass('mouse');
+    $(this).find('.subnav_work').show();
   },function(){
-    $('.subnav_work').hide();
+    $(this).children('a').removeClass('mouse');
+    $(this).find('.subnav_work').hide();
   });
   $('.us_nav li').click(function(){
     $('.us_nav li').removeClass('cur');

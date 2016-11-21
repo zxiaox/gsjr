@@ -3,7 +3,11 @@
 
     <div class="content">
       <p class="title">
-        新闻管理
+        <eq name="hide" value="0">
+          新闻管理
+          <else />
+          回收站
+        </eq>
       </p>
       <table>
         <tr>

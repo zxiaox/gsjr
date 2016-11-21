@@ -11,7 +11,7 @@ class AdminAction extends Action {
     }else{
       $hide = 0;
     }
-    $news = M('news')->query('select gs_news.*,(SELECT user from gs_user where id = gs_news.created_by) as created_name, (SELECT user from gs_user where id = gs_news.updated_by) as updated_name from gs_news where hide = '. $hide);
+    $news = M('news')->query('select gs_news.*,(SELECT user from gs_user where id = gs_news.created_by) as created_name, (SELECT user from gs_user where id = gs_news.updated_by) as updated_name from gs_news where hide = '. $hide .' order by created_time desc');
 
     $newstype = M('newstype')->getField('type',true);
     $this->assign('news',$news);
@@ -28,7 +28,7 @@ class AdminAction extends Action {
       $data["content"] = $p['content'];
       $data["type_id"] = $p['newstype'];
       $data["theme"] = $p['theme'];
-      
+
       if($p['id']){
         $data["updated_by"] = $_SESSION['admin']['id'];
         $data["updated_time"] = date("Y-m-d H:i:s");

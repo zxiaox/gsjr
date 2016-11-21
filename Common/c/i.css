@@ -37,7 +37,6 @@ body {
   float: left;
   line-height: 60px;
   font-size: 16px;
-  position: relative;
 }
 #nav li>a {
   display: block;
@@ -45,6 +44,7 @@ body {
   height: 60px;
   line-height: 60px;
   color: #fff;
+  position: relative;
 }
 #nav .nav a:before {
   content: '';
@@ -74,22 +74,24 @@ body {
 .subnav_work {
   display: none;
   position: absolute;
-  z-index: 1;
+  z-index: 111;
   left: 0;
   top: 59px;
-  background: #333;
   padding: 0 10px;
-  width: 160px;
-  opacity: 0.9;
+  width: 100%;
+  height: 62px;
+  background:rgba(0,7,67,0.80);
 }
 .subnav_work a {
-  display: block;
-  background: #666;
+  background:#9ba3cd;
+  border:2px solid #8691df;
+  font-family:PingFangSC-Regular;
+  font-size:16px;
   color: #fff;
-  padding: 0 6px;
-  height: 30px;
-  line-height: 30px;
-  margin: 10px 0;
+  padding: 0 14px;
+  height: 32px;
+  line-height: 32px;
+  margin: 14px 14px 14px 0;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   -o-transition: background 0.3s ease-in-out;
@@ -208,11 +210,10 @@ body {
   position: relative;
   z-index: 1;
   background: #fff;
-}
-.service.center {
-  width: 464px;
+
 }
 .service.cur {
+  width: 464px;
   border: 2px solid #DB6113;
   z-index: 2;
 }
@@ -243,12 +244,13 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.service > img {
+.service > .img {
   margin: 20px;
   width:320px;
+  height: 150px;
+  background-size: cover;
 }
-.service.center > img {
-  margin: 20px;
+.service.cur > .img {
   width:420px;
 }
 .service p.desc {
