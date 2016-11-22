@@ -37,6 +37,7 @@ class AdminAction extends Action {
         $this->success('更新成功');
       }else{
         $data["created_by"] = $_SESSION['admin']['id'];
+        $data["created_time"] = date("Y-m-d H:i:s");
         $add = M('news')->add($data);
         $this->success('发布成功');
       }
