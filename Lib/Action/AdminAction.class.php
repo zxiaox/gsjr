@@ -13,7 +13,8 @@ class AdminAction extends Action {
     }
     $news = M('news')->query('select gs_news.*,(SELECT user from gs_user where id = gs_news.created_by) as created_name, (SELECT user from gs_user where id = gs_news.updated_by) as updated_name from gs_news where hide = '. $hide .' order by created_time desc');
 
-    $newstype = M('newstype')->getField('type',true);
+    //$newstype = M('newstype')->getField('type',true);
+    $newstype = array('0'=> '集团动态','1'=> '党建工作','2'=> '行业资讯','3'=> '下载中心');
     $this->assign('news',$news);
     $this->assign('newstype',$newstype);
     $this->assign('hide',$hide);

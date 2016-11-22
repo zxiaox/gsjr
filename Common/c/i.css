@@ -348,23 +348,71 @@ body {
   opacity: 1;
 }
 .about {
-  background: #939393;
+  -background: #939393;
+  position: relative;
+}
+.about .mask {
+  position: absolute;
+  width: 100%;
+  height: 320px;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 11;
 }
 .about .w1190 {
-  position: relative;
 }
 .about .we {
   width: 1190px;
   height: 320px;
+  /*
   background: url(../i/snav.jpg) no-repeat;
   background-size: contain;
-  position: relative;
+  */
   overflow: hidden;
 }
 .about .we div.clearfix a{
   float: left;
   width: 238px;
   height: 320px;
+}
+.about a p{
+  font-family: PingfangSC-Light;
+  color: #fff;
+  z-index: 22;
+  position: relative;
+}
+.about a p:first-child {
+  font-family: PingfangSC-Medium;
+  font-size: 16px;
+  padding: 36px 0;
+  text-align: center;
+}
+.about a p:nth-child(2) {
+  font-size: 13px;
+  height: 120px;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 0 16px;
+}
+.about a .abouta {
+  display: table;
+  height: 22px;
+  line-height: 22px;
+  border: 1px solid #fff;
+  margin: 18px auto 0;
+  padding: 0 28px;
+  font-family: PingfangSC-Light;
+  font-size: 14px;
+  position: relative;
+  z-index: 22;
+  color: #fff;
+  -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+.about a .abouta:hover {
+  color: #333;
+  background: #fff;
 }
 /*
 .about .we div.clearfix {
@@ -574,6 +622,7 @@ body {
   padding: 19px 0 15px 0;
 }
 .detail .rel div.first {
+  padding-top: 0;
   border: none;
 }
 .newcenter .theme
