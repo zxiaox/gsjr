@@ -313,6 +313,9 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.news .col2 .desc a {
+  color:#4a4a4a;
+}
 .news .col2 .desc:first-child {
   margin-top: 17px;
 }
