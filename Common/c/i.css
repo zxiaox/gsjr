@@ -577,6 +577,7 @@ body {
   float: left;
   width: 837px;
   text-align: center;
+  position: relative;
 }
 .content .ceo {
   padding: 10px;
@@ -973,4 +974,122 @@ body {
   height: 246px;
   margin-right: 10px;
   margin-bottom: 20px;
+}
+.year {
+  width: 836px;
+  height: 42px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.year2012 {
+  background-image:url(../i/a2012.png);
+}
+.year2013 {
+  background-image:url(../i/a2013.png);
+}
+.year2014 {
+  background-image:url(../i/a2014.png);
+}
+.year2015 {
+  background-image:url(../i/a2015.png);
+}
+.year2016 {
+  background-image:url(../i/a2016.png);
+}
+.tyear {
+  width: 836px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 77px;
+}
+.t2012 {
+  background-image:url(../i/t2012.png);
+}
+.t2013 {
+  background-image:url(../i/t2013.png);
+}
+.t2014 {
+  background-image:url(../i/t2014.png);
+}
+.t2015 {
+  background-image:url(../i/t2015.png);
+}
+.t2016 {
+  background-image:url(../i/t2016.png);
+}
+.year a {
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+.yearbox {
+  padding-top: 10px;
+}
+.box2012 {
+  background: url(../i/a2012bar.png) center no-repeat;
+}
+.box2013 {
+  background: url(../i/a2013bar.png) center no-repeat;
+}
+.box2014 {
+  background: url(../i/a2014bar.png) center no-repeat;
+}
+.box2015 {
+  background: url(../i/a2015bar.png) center no-repeat;
+}
+.box2016 {
+  background: url(../i/a2016bar.png) center no-repeat;
+}
+.yearbox > div {
+  width: 400px;
+}
+.yearbox .pull-left {
+  margin-top: 20px;
+}
+.yearbox div.pull-left img {
+  width: 95% !important;
+  float: left;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.yearbox div.pull-right img {
+  width: 95% !important;
+  float: right;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.story .storytitle {
+  margin: 20px auto;
+  width: 180px;
+  height: 54px;
+}
+.story .clearfix {
+  margin-bottom: 10px;
+}
+.mystorytitle {
+  background: url(../i/mystory.png) no-repeat;
+}
+.yourstorytitle {
+  background: url(../i/yourstory.png) no-repeat;
+}
+.ourstorytitle {
+  background: url(../i/ourstory.png) no-repeat;
+}
+.mystory img.mys,.ourstory img.ours {
+  width: 272px !important;
+  margin-top: 0;
+  float: left;
+  margin-left: 8px;
+}
+.yourstory img.yours {
+  width: 412px !important;
+  margin-top: 0;
+  float: left;
+  margin-left: 10px;
+}
+.mystory img.mys:first-child,.ourstory img.ours:first-child,.yourstory img.yours:first-child {
+  margin-left: 0;
 }
