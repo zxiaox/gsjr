@@ -95,7 +95,7 @@ class WelcomeAction extends Action {
       //$this->assign('page2',$show2);// 赋值分页输出
       //$this->assign('page3',$show3);// 赋值分页输出
 
-      $ms = $s->where('type_id = 1 and hide = "0"')->limit($Page1->firstRow, $Page1->listRows)->select();
+      $ms = $s->where('type_id = '.$type.' and hide = "0"')->limit($Page1->firstRow, $Page1->listRows)->select();
       //$ys = $s->where('type_id = 2 and hide = "0"')->limit($Page2->firstRow, $Page2->listRows)->select();
       //$os = $s->where('type_id = 3 and hide = "0"')->limit($Page3->firstRow, $Page3->listRows)->select();
 
