@@ -27,7 +27,11 @@
            <table class='my'>
              <tr>
                <th colspan="3">
-                 My story
+                 <?php
+                    $storyName = ['We', 'My', 'Your', 'Our'];
+                    echo $storyName[$type];
+                 ?>
+                 story
                </th>
              </tr>
              <volist id="ms" name="ms">

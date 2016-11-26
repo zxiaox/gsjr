@@ -100,6 +100,7 @@ class WelcomeAction extends Action {
       //$os = $s->where('type_id = 3 and hide = "0"')->limit($Page3->firstRow, $Page3->listRows)->select();
 
       $this->assign('ms', $ms);
+      $this->assign('type', $type);
       //$this->assign('ys', $ys);
       //$this->assign('os', $os);
     }
