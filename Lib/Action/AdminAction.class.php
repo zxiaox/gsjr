@@ -13,7 +13,7 @@ class AdminAction extends Action {
     }
 
     import('ORG.Util.Page');// 导入分页类
-    $count      = M('news')->where('hide=0')->count();// 查询满足要求的总记录数
+    $count      = M('news')->where('hide='.$hide)->count();// 查询满足要求的总记录数
     $Page       = new Page($count, 20);// 实例化分页类 传入总记录数和每页显示的记录数
     $show       = $Page->show();// 分页显示输出
     $this->assign('list',$list);// 赋值数据集
@@ -83,7 +83,14 @@ class AdminAction extends Action {
     }else{
       $hide = 0;
     }
-    $storys = M('storys')->query('select gs_storys.*,(SELECT user from gs_user where id = gs_storys.created_by) as created_name, (SELECT user from gs_user where id = gs_storys.updated_by) as updated_name from gs_storys where hide = '. $hide .' order by created_time desc');
+    import('ORG.Util.Page');// 导入分页类
+    $count      = M('storys')->where('hide='.$hide)->count();// 查询满足要求的总记录数
+    $Page       = new Page($count, 20);// 实例化分页类 传入总记录数和每页显示的记录数
+    $show       = $Page->show();// 分页显示输出
+    $this->assign('list',$list);// 赋值数据集
+    $this->assign('page',$show);// 赋值分页输出
+
+    $storys = M('storys')->query('select gs_storys.*,(SELECT user from gs_user where id = gs_storys.created_by) as created_name, (SELECT user from gs_user where id = gs_storys.updated_by) as updated_name from gs_storys where hide = '. $hide .' order by created_time desc limit '.$Page->firstRow.',' .$Page->listRows);
 
     $storystype = array('0'=> 'My story','1'=> 'Your story','2'=> 'Our story');
     $this->assign('storys',$storys);
