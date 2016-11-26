@@ -1,12 +1,11 @@
 <include file="./Tpl/Admin/h.html"/>
     <include file="./Tpl/Admin/admin_nav.html"/>
-
     <div class="content">
       <p class="title">
         <eq name="hide" value="0">
-          新闻管理
+          故事管理
           <else />
-          新闻回收站
+          故事回收站
         </eq>
       </p>
       <table>
@@ -14,23 +13,20 @@
           <th>标题</th>
           <th>分类</th>
           <th>封面图片</th>
-          <th>发布者</th>
+          <th>作者</th>
           <th>最后更新</th>
           <th>操作</th>
         </tr>
-        <volist id="news" name="news">
+        <volist id="news" name="storys">
           <tr>
             <td>{$news['title']}</td>
-            <td>{$newstype[$news['type_id'] - 1]}</td>
+            <td>{$storystype[$news['type_id'] - 1]}</td>
             <td><empty name="news['theme']">无封面<else /><img src="{$news['theme']}" alt="" /></empty></td>
-            <td>{$news['created_name']}</td>
+            <td>{$news['author']}</td>
             <td><empty name="news['updated_name']">--<else />{$news['updated_name']}</empty></td>
-            <td><eq name="hide" value="0"><a href="/Admin/news?id={$news['id']}">编辑</a> <a href="/Admin/destroy?id={$news['id']}&type=news">删除</a><else /><a href="/Admin/destroy?id={$news['id']}&hide=0">恢复</a></eq> </td>
+            <td><eq name="hide" value="0"><a href="/Admin/addstory?id={$news['id']}">编辑</a> <a href="/Admin/destroy?id={$news['id']}&type=storys">删除</a><else /><a href="/Admin/destroy?id={$news['id']}&hide=0">恢复</a></eq> </td>
           </tr>
         </volist>
       </table>
-      <div class="mypage">
-        {$page}
-      </div>
     </div>
 <include file="./Tpl/Admin/f.html"/>

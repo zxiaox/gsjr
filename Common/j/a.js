@@ -5,5 +5,5 @@ $(function(){
       alert('请输入标题！');
       return false;
     }
-  })
+  });
 })

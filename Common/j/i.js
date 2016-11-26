@@ -33,5 +33,16 @@ $(function(){
     $('.yearbox').hide();
     $('.box201' + ($(this).index() + 2)).show();
     return false;
-  })
+  });
+  // $('.storytitle').click(function(){
+  //   $('.storylist table').hide();
+  //   if($(this).hasClass('ourstorytitle')){
+  //     $('.storylist table.our').show();
+  //   }else if ($(this).hasClass('yourstorytitle')){
+  //     $('.storylist table.your').show();
+  //   }else {
+  //     $('.storylist table.my').show();
+  //   }
+  //   $(this).parent().hide();
+  // });
 });

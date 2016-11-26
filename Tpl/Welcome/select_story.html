@@ -22,26 +22,27 @@
 
    <div class="detail clearfix">
      <div class="content">
-       <div class="story">
-         <div class="mystorytitle storytitle"><a href="/Welcome/select_story?type=1"></a> </div>
-         <div class="mystory clearfix">
-           <img class="mys" src="/Common/i/my1.jpg">
-           <img class="mys" src="/Common/i/my2.jpg">
-           <img class="mys" src="/Common/i/my3.jpg">
-         </div>
-         <div class="yourstorytitle storytitle"><a href="/Welcome/select_story?type=2"></a> </div>
-         <div class="yourstory clearfix">
-           <img class="yours" src="/Common/i/your1.jpg">
-           <img class="yours" src="/Common/i/your2.jpg">
-         </div>
-         <div class="ourstorytitle storytitle"><a href="/Welcome/select_story?type=3"></a> </div>
-         <div class="ourstory clearfix">
-           <img class="ours" src="/Common/i/our1.jpg">
-           <img class="ours" src="/Common/i/our2.jpg">
-           <img class="ours" src="/Common/i/our3.jpg">
+       <div class="storylist">
+         <div class="">
+           <table class='my'>
+             <tr>
+               <th colspan="3">
+                 My story
+               </th>
+             </tr>
+             <volist id="ms" name="ms">
+               <tr>
+                 <td><a href="/Welcome/story?id={$ms['id']}">{$ms['title']}</a></td>
+                 <td>作者：{$ms['author']}</td>
+                 <td>{$ms['created_time'] | substr= 0,10}</td>
+               </tr>
+             </volist>
+           </table>
+           <div class="mypage">
+             {$page1}
+           </div>
          </div>
        </div>
-
      </div>
      <include file="./Tpl/Welcome/rel2.html"/>
    </div>

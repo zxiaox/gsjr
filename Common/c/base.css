@@ -47,7 +47,7 @@ summary {
 }
 
 html {
-  font-family: sans-serif, 'Microsoft YaHei';
+  font-family: 'Microsoft YaHei',sans-serif;
 
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -324,3 +324,24 @@ h6, .h6 {
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 */
+
+/*thikphp page*/
+
+.mypage {
+	display: table;
+  margin: 20px auto;
+	line-height: 32px;
+}
+.mypage a,.mypage span {
+  float: left;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #e8e8e8;
+	margin: 0 2px;
+	padding: 0 6px;
+	color: #000;
+}
+.mypage span {
+	color: #fff;
+	background: #ec6a1a;
+}

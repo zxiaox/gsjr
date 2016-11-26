@@ -1,5 +1,5 @@
 <div class="nav">
-  <a href="/"><img class="logo" src="../Common/i/logonew.png" alt="" /></a>
+  <a href="/"><img class="logo" src="/Common/i/logonew.png" alt="" /></a>
   <p class="welcome">
     欢迎您：{$_SESSION['admin']['user']}!【<a href="/Login/logout">退出</a> 】
   </p>
@@ -7,5 +7,9 @@
   <!-- <a href="#">新闻分类管理</a> -->
   <a href="/Admin/news">新闻发布</a>
   <a href="/Admin/index">新闻管理</a>
-  <a href="/Admin/index?hide=1">回收站</a>
+  <a href="/Admin/index?hide=1">新闻回收站</a>
+  <hr style="width: 75%;">
+  <a href="/Admin/addstory">故事发布</a>
+  <a href="/Admin/storys">故事管理</a>
+  <a href="/Admin/storys?hide=1">故事回收站</a>
 </div>

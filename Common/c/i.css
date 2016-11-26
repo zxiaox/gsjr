@@ -489,7 +489,7 @@ body {
   top:0;
 }
 .footer {
-  background: #313452;
+  background: #000843;
   color: #fff;
   padding-bottom: 100px;
 }
@@ -503,7 +503,7 @@ body {
 .email,
 .addr,
 .web {
-  padding-left: 20px;
+  padding-left: 24px;
   font-size: 12px;
   line-height: 18px;
   margin-bottom: 6px;
@@ -1027,9 +1027,11 @@ body {
 }
 .yearbox {
   padding-top: 10px;
+  display: none;
 }
 .box2012 {
   background: url(../i/a2012bar.png) center no-repeat;
+  display: block;
 }
 .box2013 {
   background: url(../i/a2013bar.png) center no-repeat;
@@ -1066,6 +1068,11 @@ body {
   width: 180px;
   height: 54px;
 }
+.storytitle a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .story .clearfix {
   margin-bottom: 10px;
 }
@@ -1092,4 +1099,45 @@ body {
 }
 .mystory img.mys:first-child,.ourstory img.ours:first-child,.yourstory img.yours:first-child {
   margin-left: 0;
+}
+
+.storylist table {
+  width: 100%;
+  line-height: 50px;
+}
+.storylist table a {
+  color: #000;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.storylist table tr:first-child,.storylist table tr th{
+  height: 70px;
+  line-height: 120px;
+}
+.storylist table tr:nth-child(even) {
+  background: #eee;
+}
+.storylist table td:nth-child(1){
+  text-align: left;
+  padding-left: 1em;
+  width: 60%;
+}
+.storylist table td:nth-child(2){
+  text-align: left;
+  width: 20%;
+}
+.storylist table td:nth-child(3){
+  width: 20%;
+}
+.storylist table th{
+  font-family:PingFangSC-Medium;
+  font-size:30px;
+  color:#000000;
+}
+.storylist table tr:first-child:hover {
+	background: #fff;
+}
+.storylist table tr:hover {
+	background: #ccc;
 }

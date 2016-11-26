@@ -68,11 +68,13 @@
 	font-size: 26px;
 	padding: 20px 0;
 	position: relative;
+	padding-left: 1em;
 }
 .content .title:before {
 	content: '';
-	width: 1px;
+	width: 0px;
 	border-left: 4px solid #000843;
+	margin-right: .5em;
 }
 .content > table {
 	width: 100%;
