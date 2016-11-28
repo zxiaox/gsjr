@@ -21,11 +21,28 @@ class WelcomeAction extends Action {
   }
   public function news(){
     $get = $this->_get();
+    $newstype = array('1'=> '集团动态','2'=> '党建工作','3'=> '行业资讯','4'=> '下载中心');
+    if($get['src'] == 'all'){
+      import('ORG.Util.Page');// 导入分页类
+      $count      = M('news')->where('hide=0')->count();// 查询满足要求的总记录数
+      $Page       = new Page($count, 10);// 实例化分页类 传入总记录数和每页显示的记录数
+      $show       = $Page->show();// 分页显示输出
+      $list = M('news')->where("hide = 0")->order('created_time desc')->limit($Page->firstRow, $Page->listRows)->select();
+      $newlist = M('news')->where("hide = 0")->order('created_time desc')->limit(20)->select();
+      $this->assign('list',$list);// 赋值数据集
+      $this->assign('list1',$newlist);// 赋值数据集
+      $this->assign('list2',$newlist);// 赋值数据集
+      $this->assign('page',$show);// 赋值分页输出
+
+      $this->assign('newstype', $newstype);
+      $this->display('allnews');
+      return;
+    }
     $type = 1;
     if($get['type']){
       $type = (int)$get['type'];
     }
-    $newstype = array('1'=> '集团动态','2'=> '党建工作','3'=> '行业资讯','4'=> '下载中心');
+
     $newsdata = M('news')->where("hide = 0 and type_id = $type")->order('created_time desc')->limit(10)->select();
     if($get['id']){
       $id = (int)$get['id'];

@@ -93,12 +93,6 @@
 .content > table tr:nth-child(even) {
 	background: #e8e8e8;
 }
-.content > table tr:first-child:hover {
-	background: #fff;
-}
-.content > table tr:hover {
-	background: #ccc;
-}
 .content > table tr td:nth-child(1) {
 	text-indent: 1em;
 }

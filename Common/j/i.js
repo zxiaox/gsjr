@@ -45,4 +45,14 @@ $(function(){
   //   }
   //   $(this).parent().hide();
   // });
+  $('.hr_nav li').click(function(){
+    $('.hr_nav li').removeClass('cur');
+    $(this).addClass('cur');
+    $('.hrs').hide();
+    $('.hr' + ($(this).index() + 1)).show();
+  });
+  $('.description a').click(function(){
+    $('.hrs').hide();
+    $('.hr' + ($(this).parent().index() + 4)).show();
+  })
 });

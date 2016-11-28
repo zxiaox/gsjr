@@ -1,0 +1,52 @@
+<include file="./Tpl/Welcome/h.html"/>
+<div class="newcenter">
+ <div class="w1190">
+  <div class="theme clearfix">
+    <div class="left">
+      <div><img width="100%" src="/Common/i/newtop.png" /></div>
+    </div>
+    <div class="right">
+      <p class="title">新闻中心</p>
+      <ul>
+        <volist id="newsdata1" name="list1">
+          <li><a href="/Welcome/news?id={$newsdata1['id']}&type={$type}">{$newsdata1["title"]}</a></li>
+        </volist>
+      </ul>
+    </div>
+  </div>
+
+  <div class="detail clearfix">
+    <div class="content">
+      <table>
+        <volist id="news" name="list">
+          <tr>
+            <td width="60%"><a href="/Welcome/news?id={$news['id']}&type={$news['type_id']}">{$news['title']}</a></td>
+            <td width="20%">{$newstype[$news['type_id']]}</td>
+            <!-- <td><empty name="news['theme']">无封面<else /><img src="{$news['theme']}" alt="" /></empty></td> -->
+            <!-- <td>{$news['created_name']}</td> -->
+            <td width="20%"><empty name="news['created_time']">--<else />{$news['created_time'] | substr=0,10}</empty></td>
+            <!-- <td><eq name="hide" value="0"><a href="/Admin/news?id={$news['id']}">编辑</a> <a href="/Admin/destroy?id={$news['id']}&type=news">删除</a><else /><a href="/Admin/destroy?id={$news['id']}&hide=0&type=news">恢复</a></eq> </td> -->
+          </tr>
+        </volist>
+      </table>
+      <div class="mypage">
+        {$page}
+      </div>
+    </div>
+    <div class="rel">
+      <p class="title">相关新闻</p>
+      <div class="first">
+        <img src="/Common/i/ab.png" />
+        <p class="sub_title">最新动态</p>
+        <ul>
+          <volist id="newsdata2" name="list2">
+            <li><a href="/Welcome/news?id={$newsdata2['id']}&type={$type}">{$newsdata2["title"]}</a></li>
+          </volist>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+ </div>
+</div>
+<include file="./Tpl/Welcome/f.html"/>
