@@ -11,6 +11,7 @@
       </p>
       <table>
         <tr>
+          <th title="值越小越靠前">排序</th>
           <th>标题</th>
           <th>分类</th>
           <th>封面图片</th>
@@ -20,6 +21,7 @@
         </tr>
         <volist id="news" name="news">
           <tr>
+            <td>{$news['setorder']}</td>
             <td>{$news['title']}</td>
             <td>{$newstype[$news['type_id'] - 1]}</td>
             <td><empty name="news['theme']">无封面<else /><img src="{$news['theme']}" alt="" /></empty></td>

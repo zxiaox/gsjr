@@ -11,8 +11,12 @@
       <form action="/Admin/addstory" method="post">
         <input type="hidden" value="{$edit['id']}" name="id" />
         <div class="adminformrow">
+          <label class="label">设置排序：</label>
+          <input type="number" name="setorder" placeholder="值越小越靠前" value="{$edit['setorder'] ? $edit['setorder'] : 99 }" /><span>(值越小越靠前)</span>
+        </div>
+        <div class="adminformrow">
           <label class="label">故事标题：</label>
-          <input type="text" name="title" placeholder="新闻标题" value="{$edit['title']}" />
+          <input type="text" name="title" placeholder="故事标题" value="{$edit['title']}" />
         </div>
         <div class="adminformrow">
           <label class="label">故事作者：</label>
@@ -20,7 +24,7 @@
         </div>
         <div class="adminformrow">
           <label class="label">封面图片：</label>
-          <input type="text" name="theme" placeholder="新闻封面图URL(可为空)" value="{$edit['theme']}" />
+          <input type="text" name="theme" placeholder="建议填，可为空，会从默认里面选" value="{$edit['theme']}" /><span>(最佳尺寸：我的故事-272x180，你的故事-412x180，我们的故事-272x180)</span>
         </div>
         <div class="adminformrow">
           <label class="label">故事分类：</label>

@@ -19,7 +19,7 @@ class AdminAction extends Action {
     $this->assign('list',$list);// 赋值数据集
     $this->assign('page',$show);// 赋值分页输出
 
-    $news = M('news')->query('select gs_news.*,(SELECT user from gs_user where id = gs_news.created_by) as created_name, (SELECT user from gs_user where id = gs_news.updated_by) as updated_name from gs_news where hide = '. $hide .' order by created_time desc limit '.$Page->firstRow.',' .$Page->listRows);
+    $news = M('news')->query('select gs_news.*,(SELECT user from gs_user where id = gs_news.created_by) as created_name, (SELECT user from gs_user where id = gs_news.updated_by) as updated_name from gs_news where hide = '. $hide .' order by setorder asc,created_time desc limit '.$Page->firstRow.',' .$Page->listRows);
 
     //$newstype = M('newstype')->getField('type',true);
     $newstype = array('0'=> '集团动态','1'=> '党建工作','2'=> '行业资讯','3'=> '下载中心');
@@ -33,6 +33,7 @@ class AdminAction extends Action {
     if($this->_post()){
       $p = $this->_post();
       $data = array();
+      $data["setorder"] = $p['setorder'];
       $data["title"] = $p['title'];
       $data["content"] = $p['content'];
       $data["type_id"] = $p['newstype'];
@@ -90,7 +91,7 @@ class AdminAction extends Action {
     $this->assign('list',$list);// 赋值数据集
     $this->assign('page',$show);// 赋值分页输出
 
-    $storys = M('storys')->query('select gs_storys.*,(SELECT user from gs_user where id = gs_storys.created_by) as created_name, (SELECT user from gs_user where id = gs_storys.updated_by) as updated_name from gs_storys where hide = '. $hide .' order by created_time desc limit '.$Page->firstRow.',' .$Page->listRows);
+    $storys = M('storys')->query('select gs_storys.*,(SELECT user from gs_user where id = gs_storys.created_by) as created_name, (SELECT user from gs_user where id = gs_storys.updated_by) as updated_name from gs_storys where hide = '. $hide .' order by setorder asc,created_time desc limit '.$Page->firstRow.',' .$Page->listRows);
 
     $storystype = array('0'=> 'My story','1'=> 'Your story','2'=> 'Our story');
     $this->assign('storys',$storys);
@@ -102,6 +103,7 @@ class AdminAction extends Action {
     if($this->_post()){
       $p = $this->_post();
       $data = array();
+      $data["setorder"] = $p['setorder'];
       $data["title"] = $p['title'];
       $data["content"] = $p['content'];
       $data["type_id"] = $p['newstype'];

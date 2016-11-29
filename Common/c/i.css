@@ -164,7 +164,6 @@ body {
   background: url(../i/back_icon2.png) no-repeat;
 }
 .subnav a .title{
-  padding-left: 20px;
   padding-top: 32px;
   line-height: 16px;
   font-weight: bold;
@@ -174,12 +173,12 @@ body {
   text-align: center;
 }
 .subnav a .desc{
-  padding-left: 20px;
-  margin-top: 6px;
+  margin-top: 16px;
   line-height: 20px;
   font-family:PingFangSC-Light;
   font-size:14px;
   color:#4a4a4a;
+  text-align: center;
 }
 .body {
   background: #F2F2F2;
@@ -295,12 +294,13 @@ body {
 .news .col2 .row {
   background:#f6f6f6;
   width:410px;
-  height:180px;
+  height:115px;
   overflow: hidden;
   padding: 0 11px;
+  margin-top: 15px;
 }
 .news .col2 .row:first-child {
-  margin-bottom: 15px;
+  margin-top: 0;
 }
 .news .col2 .desc {
   font-family:PingFangSC-Light;
@@ -601,26 +601,44 @@ body {
   text-align: center;
   position: relative;
 }
+.detail .klass {
+  text-align: left;
+  width: 90%;
+  margin: 0 auto 20px;
+}
+.detail .klass a {
+  color: #333;
+  margin-right: 10px;
+  text-decoration: underline;
+}
 .detail .content table {
   width: 90%;
   margin: 0 auto;
   line-height: 36px;
 }
-.detail .content table tr:nth-child(odd) {
+.detail .content .klass + table tr:nth-child(odd) {
   background: #eee;
+  color: #666;
 }
-
+.detail .content table tr:nth-child(even) {
+  background: #f8f8f8;
+  color: #666;
+}
 .detail .content table tr:hover {
   background: #ddd;
 }
 .detail .content table tr td:first-child {
   text-align: left;
   text-indent: 1em;
+  width: 60%;
 }
 .detail .content table tr td:first-child a {
   display: block;
-  width: 100%;
+  width: 400px;
   color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .content .ceo {
   padding: 10px;
@@ -802,23 +820,27 @@ body {
 }
 .us_nav li {
   float: left;
-  width: 100px;
+  width: 120px;
   line-height: 70px;
-  padding: 0 15px;
+  padding: 0 20px;
   font-family:PingFangSC-Regular;
   font-size:16px;
   color:#000000;
   cursor: pointer;
+  text-align: center;
 }
 .us_nav li.cur {
   height: 70px;
   border-bottom: 2px solid #6896ff;
 }
 .us_nav li a {
-  color: #000000;
+  color: #666;
   display: block;
   width: 100%;
   height: 100%;
+}
+.us_nav li.cur a {
+  color: #000;
 }
 .us_theme {
   position: absolute;
@@ -1127,6 +1149,7 @@ body {
   height: 100%;
 }
 .story .clearfix {
+  display: block;
   margin-bottom: 10px;
 }
 .mystorytitle {
@@ -1138,20 +1161,58 @@ body {
 .ourstorytitle {
   background: url(../i/ourstory.png) no-repeat;
 }
-.mystory img.mys,.ourstory img.ours {
+.mystory .mys, .ourstory .ours {
   width: 272px !important;
   margin-top: 0;
   float: left;
   margin-left: 8px;
+  background: #eee;
+  padding-bottom: 10px;
 }
-.yourstory img.yours {
+.mys .theme, .ours .theme {
+  width: 272px !important;
+  height: 180px;
+  margin-top: 0 !important;
+}
+.yours .theme {
+  width: 412px !important;
+  height: 180px;
+  margin-top: 0 !important;
+}
+.yourstory .yours {
   width: 412px !important;
   margin-top: 0;
   float: left;
   margin-left: 10px;
+  background: #eee;
+  padding-bottom: 10px;
 }
-.mystory img.mys:first-child,.ourstory img.ours:first-child,.yourstory img.yours:first-child {
+.mystory .mys:first-child,.ourstory .ours:first-child,.yourstory .yours:first-child {
   margin-left: 0;
+}
+.story .title {
+  text-indent: 0 !important;
+  text-align: left !important;
+  color: #333 !important;
+  margin-bottom: 0 !important;
+  padding: 0 10px;
+}
+.story .author {
+  text-indent: 0 !important;
+  text-align: left !important;
+  color: #999 !important;
+  line-height: 16px !important;
+  height: 20px !important;
+  padding: 0 10px;
+}
+.story .desc {
+  text-indent: 0 !important;
+  text-align: left !important;
+  color: #666 !important;
+  line-height: 20px !important;
+  height: 40px;
+  overflow: hidden;
+  padding: 0 10px;
 }
 
 .storylist table {
@@ -1175,22 +1236,27 @@ body {
   text-align: left;
   padding-left: 1em;
   width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .storylist table td:nth-child(2){
   text-align: left;
   width: 20%;
+  color: #666;
 }
 .storylist table td:nth-child(3){
   width: 20%;
+  color: #666;
 }
 .storylist table th{
   font-family:PingFangSC-Medium;
   font-size:30px;
   color:#000000;
 }
-.storylist table tr:first-child:hover {
-	background: #fff;
-}
 .storylist table tr:hover {
 	background: #ccc;
+}
+.storylist table tr:first-child, .storylist table tr:first-child:hover {
+	background: #fff;
 }

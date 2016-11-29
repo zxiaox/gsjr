@@ -24,22 +24,38 @@
      <div class="content">
        <div class="story">
          <div class="mystorytitle storytitle"><a href="/Welcome/select_story?type=1"></a> </div>
-         <a class="mystory clearfix" href="/Welcome/select_story?type=1">
-           <img class="mys" src="/Common/i/my1.jpg">
-           <img class="mys" src="/Common/i/my2.jpg">
-           <img class="mys" src="/Common/i/my3.jpg">
-         </a>
+         <div class="mystory clearfix">
+           <volist id="mys" name="story1" key="key1">
+             <a class="mys" href="/Welcome/story?id={$mys['id']}">
+               <img class="theme" src="<empty name="mys['theme']">/Common/i/sdflt{$key1 + 1}.jpg<else/>{$mys['theme']}</empty>">
+               <p class="title">{$mys['title']}</p>
+               <p class="author">作者：{$mys['author']}</p>
+               <p class="desc">{$mys['content']|strip_tags}</p>
+             </a>
+           </volist>
+         </div>
          <div class="yourstorytitle storytitle"><a href="/Welcome/select_story?type=2"></a> </div>
-         <a class="yourstory clearfix" href="/Welcome/select_story?type=2">
-           <img class="yours" src="/Common/i/your1.jpg">
-           <img class="yours" src="/Common/i/your2.jpg">
-         </a>
+         <div class="yourstory clearfix">
+           <volist id="yours" name="story2" key="key2">
+             <a class="yours" href="/Welcome/story?id={$yours['id']}">
+               <img class="theme" src="<empty name="yours['theme']">/Common/i/sdflt{$key2 + 1}.jpg<else/>{$yours['theme']}</empty>">
+               <p class="title">{$yours['title']}</p>
+               <p class="author">作者：{$yours['author']}</p>
+               <p class="desc">{$yours['content']|strip_tags}</p>
+             </a>
+           </volist>
+         </div>
          <div class="ourstorytitle storytitle"><a href="/Welcome/select_story?type=3"></a> </div>
-         <a class="ourstory clearfix" href="/Welcome/select_story?type=3">
-           <img class="ours" src="/Common/i/our1.jpg">
-           <img class="ours" src="/Common/i/our2.jpg">
-           <img class="ours" src="/Common/i/our3.jpg">
-         </a>
+         <div class="ourstory clearfix">
+           <volist id="ours" name="story3" key="key3">
+             <a class="ours" href="/Welcome/story?id={$ours['id']}">
+               <img class="theme" src="<empty name="ours['theme']">/Common/i/sdflt{$key3 + 1}.jpg<else/>{$ours['theme']}</empty>">
+               <p class="title">{$ours['title']}</p>
+               <p class="author">作者：{$ours['author']}</p>
+               <p class="desc">{$ours['content']|strip_tags}</p>
+             </a>
+           </volist>
+         </div>
        </div>
 
      </div>

@@ -13,21 +13,21 @@
       <div class="tab-pannel">
         <div class="posterBox">
           <div class="w11901">
-            <a href="/Welcome/work?type=7" id="poster1"><img src="../Common/i/banner2.jpg" /></a>
+            <a href="" id="poster1"><img src="../Common/i/banner3.jpg" /></a>
           </div>
         </div>
       </div>
       <div class="tab-pannel">
         <div class="posterBox">
           <div class="w11901">
-            <a href="/Welcome/work?type=7" id="poster2"><img src="../Common/i/banner3.jpg" /></a>
+            <a href="" id="poster2"><img src="../Common/i/banner2.jpg" /></a>
           </div>
         </div>
       </div>
       <div class="tab-pannel">
         <div class="posterBox">
           <div class="w11901">
-            <a href="/Welcome/work?type=7" id="poster2"><img src="../Common/i/banner4.jpg" /></a>
+            <a href="" id="poster2"><img src="../Common/i/banner4.jpg" /></a>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@
       </a>
       <a href="/Welcome/work?type=2">
         <p class="title">金融仓储</p>
-        <p class="desc">西北首家标准企业</p>
+        <p class="desc">西北首家标准金融仓储</p>
       </a>
       <a href="/Welcome/work?type=1">
         <p class="title">投资基金</p>
@@ -85,7 +85,7 @@
                 </a>
               </div>
               <div class="tab-pannel">
-                <a href="/Welcome/news?type=2">
+                <a href="/Welcome/news?type=1">
                   <img src="/Common/i/news2.jpg" >
                   <div class="title">
                     甘肃省融资担保集团定西有限公司举行开业揭牌仪式
@@ -93,7 +93,7 @@
                 </a>
               </div>
               <div class="tab-pannel">
-                <a href="/Welcome/news?type=3">
+                <a href="/Welcome/news?type=1">
                   <img src="/Common/i/news3.jpg" >
                   <div class="title">
                     集团公司督察组检查指导党建工作
@@ -141,6 +141,11 @@
           </script>
         </div>
         <div class="col col2">
+          <div class="row row0">
+            <volist id="newsdata1" name="newsdata1">
+              <p class="desc"><a href="/Welcome/news?id={$newsdata1['id']}&type=1"><span>【公司动态】</span>{$newsdata1['title']}</a></p>
+            </volist>
+          </div>
           <div class="row row1">
             <volist id="newsdata2" name="newsdata2">
               <p class="desc"><a href="/Welcome/news?id={$newsdata2['id']}&type=2"><span>【党建工作】</span>{$newsdata2['title']}</a></p>
@@ -153,8 +158,8 @@
           </div>
         </div>
         <div class="col col3">
-          <img src="/Common/i/neweg5.jpg" >
-          <img src="/Common/i/neweg6.jpg" >
+          <a href="/Welcome/news?type=2"><img src="/Common/i/neweg5.jpg" ></a>
+          <a href="/Welcome/news?type=3"><img src="/Common/i/neweg6.jpg" ></a> 
         </div>
       </div>
     </div>
