@@ -734,6 +734,37 @@ body {
   width: 840px;
   height: 300px;
 }
+#newslides {
+  -width: 840px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+#newslides a {
+  display: block;
+  position: relative;
+}
+#newslides img {
+  width: 840px;
+  height: 300px;
+  display: block;
+}
+#newslides .title {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  line-height: 30px;
+  color: #000;
+  text-indent: 1em;
+  background: rgba(255,255,255,.8);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C8ffffff,endColorstr=#C8ffffff);
+}
+#newslides .pagination {
+  left: auto;
+  right: 20px;
+}
 .newcenter .theme .right {
   float: right;
   width: 350px;
