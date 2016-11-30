@@ -21,7 +21,7 @@ class WelcomeAction extends Action {
   }
   public function news(){
     $get = $this->_get();
-    $newstype = array('1'=> '集团动态','2'=> '党建工作','3'=> '行业资讯','4'=> '下载中心');
+    $newstype = array('1'=> '公司动态','2'=> '党建工作','3'=> '行业资讯','4'=> '下载中心');
     if($get['src'] == 'all'){
       $where = '';
       if($get['type']){
