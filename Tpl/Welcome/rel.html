@@ -1,6 +1,27 @@
+<?php
+  $yewu = array(
+    array("name"=>"融资担保","link"=>"/Welcome/work?type=7", "desc"=>"2012年4月成立，注册资本11亿元人民币<br>省内规模最大的国有信用担保机构，与全省20余家银行建立战略合作关系，获得授信超过180亿元<br>累计为2000余家企业提供担保贷款近200亿元")
+    ,array("name"=>"小额贷款","link"=>"/Welcome/work?type=6", "desc"=>"2012年7月成立，注册资本4亿元人民币<br>省内资本规模最大的小额贷款公司，累计为近1600余家企业提供超过80亿元融资服务")
+    ,array("name"=>"互联网金融","link"=>"/Welcome/work?type=5", "desc"=>"2014年12月成立，注册资本3000万元人民币<br>旗下运营的国有互联网投融资平台“陇e贷”，采用“线上融资”与“线下审核”相结合的O2O运营模式，项目由国有大型担保机构提供担保，资金由浙商银行提供全程存管。")
+    ,array("name"=>"资产管理","link"=>"/Welcome/work?type=4", "desc"=>"2015年11月5日成立，注册资金2亿元人民币<br>以“化解金融风险、提升资产价值、服务经济发展”为使命，打造多种综合金融服务为手段的现代金融服务企业。")
+    ,array("name"=>"典当业务","link"=>"/Welcome/work?type=3", "desc"=>"2016年6月23日成立，注册资本5000万元人民币<br>依托强大的国有股东背景优势,充分发挥典当“短、平、快”的业务特点，为每一位客户提供量身定制的融资方案。")
+    ,array("name"=>"金融仓储","link"=>"/Welcome/work?type=2", "desc"=>"2016年10月21日成立，注册资本7000万元人民币<br>西北首家标准化金融仓储企业<br>激活动产资源，破解融资难题")
+    ,array("name"=>"投资基金","link"=>"/Welcome/work?type=1", "desc"=>"2014年12月批准设立，注册5000万元人民币<br>管理甘肃省现代服务业创业投资基金<br>首期投资规模2.5亿元人民币，是经国家发展和改革委员会、财政部批复设立的公司制封闭式基金")
+  );
+  $type = isset($_GET['type']) ? $_GET['type'] : 1;
+  unset($yewu[7 - $type]);
+  shuffle($yewu);
+?>
 <div class="rel">
   <p class="title">相关业务</p>
-  <div class="first">
+  <volist id="yewu" name="yewu" key="key" offset="0" length='2'>
+    <div <eq name="key" value="1">class="first"</eq>>
+      <a class="sub_title" href="{$yewu['link']}"><img src="/Common/i/{$key % 2 == 1 ? 'ab' : 'webnet'}.png" /></a>
+      <a class="sub_title" href="{$yewu['link']}">{$yewu['name']}</a>
+      <p class="desc">{$yewu['desc']}</p>
+    </div>
+  </volist>
+  <!-- <div class="first">
     <a class="sub_title" href="/Welcome/work?type=6"><img src="/Common/i/ab.png" /></a>
     <a class="sub_title" href="/Welcome/work?type=6">小额贷款</a>
     <p class="desc">2012年7月成立，注册资本4亿元人民币<br>
@@ -11,5 +32,5 @@
     <a class="sub_title" href="/Welcome/work?type=5">互联网金融</a>
     <p class="desc">2014年12月成立，注册资本3000万元人民币<br>
 旗下运营的国有互联网投融资平台“陇e贷”，采用“线上融资”与“线下审核”相结合的O2O运营模式，项目由国有大型担保机构提供担保，资金由浙商银行提供全程存管。</p>
-  </div>
+  </div> -->
 </div>
