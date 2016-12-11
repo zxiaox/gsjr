@@ -176,7 +176,7 @@ class AdminAction extends Action {
       if($p['id']){
         $dash = $video->where('id = "'.$p['id']. '"')->find();
         if($dash['theme']){
-          unlink('./UL/'.$dash['theme']);
+          unlink('.'.$dash['theme']);
         }
         $data["updated_by"] = $_SESSION['admin']['id'];
         $data["updated_time"] = date("Y-m-d H:i:s");
