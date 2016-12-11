@@ -13,6 +13,7 @@
           <th>排序</th>
           <th>标题</th>
           <th>摘要</th>
+          <th>链接</th>
           <th>封面图片</th>
           <th>最后更新</th>
           <th>操作</th>
@@ -22,6 +23,7 @@
             <td>{$news['setorder']}</td>
             <td>{$news['title']}</td>
             <td>{$news['content']}</td>
+            <td>{$news['author']}</td>
             <td><empty name="news['theme']">无封面<else /><img src="{$news['theme']}" alt="" /></empty></td>
             <td><empty name="news['updated_name']">--<else />{$news['updated_name']}</empty></td>
             <td><eq name="hide" value="0"><a href="/Admin/addvideo?id={$news['id']}">编辑</a> <a href="/Admin/destroy?id={$news['id']}&type=videos">删除</a><else /><a href="/Admin/destroy?id={$news['id']}&hide=0&type=videos">恢复</a></eq> </td>

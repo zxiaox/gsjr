@@ -23,7 +23,14 @@
    <div class="detail clearfix">
      <div class="content">
        <div class="video">
-         <a href="javascript:void(0);" style="background-image:url(/Common/i/vd1.jpg);"></a>
+         <volist name="videos" id="video">
+           <a class="video" href="<empty name="video['author']">javascript:void(0);<else />{$video['author']}</empty>">
+             <img src="<empty name="video['theme']">/Common/i/vd1.jpg<else />{$video['theme']}</empty>">
+             <p class="title">{$video['title']}</p>
+             <p class="desc">{$video['content']}</p>
+           </a>
+         </volist>
+         <!-- <a href="javascript:void(0);" style="background-image:url(/Common/i/vd1.jpg);"></a>
          <a href="javascript:void(0);" style="background-image:url(/Common/i/vd2.jpg);"></a>
          <a href="javascript:void(0);" style="background-image:url(/Common/i/vd4.jpg);"></a>
          <a href="javascript:void(0);" style="background-image:url(/Common/i/vd3.jpg);"></a>
@@ -31,7 +38,7 @@
          <a href="javascript:void(0);" style="background-image:url(/Common/i/vd6.jpg);"></a>
          <a href="javascript:void(0);" style="background-image:url(/Common/i/vd2.jpg);"></a>
          <a href="javascript:void(0);" style="background-image:url(/Common/i/vd4.jpg);"></a>
-         <a href="javascript:void(0);" style="background-image:url(/Common/i/vd1.jpg);"></a>
+         <a href="javascript:void(0);" style="background-image:url(/Common/i/vd1.jpg);"></a> -->
        </div>
 
 

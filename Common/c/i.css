@@ -1081,6 +1081,27 @@ body {
   margin-right: 10px;
   margin-bottom: 20px;
 }
+.detail .content .video a img {
+  width: 280px;
+  height: 186px;
+  margin-top: 0;
+  display: block;
+}
+
+.detail .content .video a .title {
+  line-height: 30px;
+  text-align: left;
+  color: #333;
+  margin-bottom: 0;
+  text-indent: 0.2em;
+}
+.detail .content .video a .desc {
+  line-height: 30px;
+  text-align: left;
+  color: #999;
+  margin-bottom: 0;
+  text-indent: 0.2em;
+}
 .year {
   width: 836px;
   height: 42px;

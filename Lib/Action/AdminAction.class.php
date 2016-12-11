@@ -170,10 +170,9 @@ class AdminAction extends Action {
       $data["setorder"] = $p['setorder'];
       $data["title"] = $p['title'];
       $data["content"] = $p['content'];
+      $data["author"] = $p['author'];
       if (move_uploaded_file($tmp, './UL/' . $image_name)) {
         $data["theme"] = '/UL/' . $image_name;
-      }else {
-        $this->success('上传图片出错！');
       }
       if($p['id']){
         $dash = $video->where('id = "'.$p['id']. '"')->find();

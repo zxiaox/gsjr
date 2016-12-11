@@ -23,13 +23,19 @@
           <input type="text" name="content" placeholder="视频摘要" value="{$edit['content']}" />
         </div>
         <div class="adminformrow">
+          <label class="label">视频链接：</label>
+          <input type="text" name="author" placeholder="视频链接" value="{$edit['author']}" /><span>(例如http://xxx.com)</span>
+        </div>
+        <div class="adminformrow">
           <label class="label">封面图片：</label>
           <input type="file" name="theme" /><span>(建议填，可为空，会从默认里面选,最佳尺寸：280x246)</span>
         </div>
-        <div class="adminformrow">
-          <label class="label">当前封面：</label>
-          <img src="{$edit['theme']}" height="50" />
-        </div>
+        <notempty name="edit['id']">
+          <div class="adminformrow">
+            <label class="label">当前封面：</label>
+            <img src="{$edit['theme']}" height="50" />
+          </div>
+        </notempty>
         <div class="adminformrow">
           <input class="addnew" type="submit" value="<empty name="edit['id']">发布<else />更新</empty>" />
         </div>

@@ -81,6 +81,11 @@ class WelcomeAction extends Action {
         $this->assign('story2', $story2);
         $this->assign('story3', $story3);
       }
+      if($get['type'] == 8) {
+        $videos = M('videos');
+        $story = $videos->where("hide = 0")->order('setorder asc,updated_time desc')->limit(18)->select();
+        $this->assign('videos', $story);
+      }
     }
 
     $this->assign('us', 'cur');
