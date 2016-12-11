@@ -1080,6 +1080,7 @@ body {
   height: 246px;
   margin-right: 10px;
   margin-bottom: 20px;
+  background: #eee;
 }
 .detail .content .video a img {
   width: 280px;
