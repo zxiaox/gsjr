@@ -1,0 +1,35 @@
+<include file="./Tpl/Admin/h.html"/>
+    <include file="./Tpl/Admin/admin_nav.html"/>
+    <div class="content">
+      <p class="title">
+        <eq name="hide" value="0">
+          视频管理
+          <else />
+          视频回收站
+        </eq>
+      </p>
+      <table>
+        <tr>
+          <th>排序</th>
+          <th>标题</th>
+          <th>摘要</th>
+          <th>封面图片</th>
+          <th>最后更新</th>
+          <th>操作</th>
+        </tr>
+        <volist id="news" name="storys">
+          <tr>
+            <td>{$news['setorder']}</td>
+            <td>{$news['title']}</td>
+            <td>{$news['content']}</td>
+            <td><empty name="news['theme']">无封面<else /><img src="{$news['theme']}" alt="" /></empty></td>
+            <td><empty name="news['updated_name']">--<else />{$news['updated_name']}</empty></td>
+            <td><eq name="hide" value="0"><a href="/Admin/addvideo?id={$news['id']}">编辑</a> <a href="/Admin/destroy?id={$news['id']}&type=videos">删除</a><else /><a href="/Admin/destroy?id={$news['id']}&hide=0&type=videos">恢复</a></eq> </td>
+          </tr>
+        </volist>
+      </table>
+      <div class="mypage">
+        {$page}
+      </div>
+    </div>
+<include file="./Tpl/Admin/f.html"/>

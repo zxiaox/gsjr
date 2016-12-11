@@ -1,0 +1,38 @@
+<include file="./Tpl/Admin/h.html"/>
+  <include file="./Tpl/Admin/admin_nav.html"/>
+    <div class="content">
+      <p class="title">
+        <if condition="$edit['id']">
+          编辑视频
+        <else />
+          发布视频
+        </if>
+      </p>
+      <form action="/Admin/addvideo" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{$edit['id']}" name="id" />
+        <div class="adminformrow">
+          <label class="label">设置排序：</label>
+          <input type="number" name="setorder" placeholder="值越小越靠前" value="{$edit['setorder'] ? $edit['setorder'] : 99 }" /><span>(值越小越靠前)</span>
+        </div>
+        <div class="adminformrow">
+          <label class="label">视频标题：</label>
+          <input type="text" name="title" placeholder="视频标题" value="{$edit['title']}" />
+        </div>
+        <div class="adminformrow">
+          <label class="label">视频摘要：</label>
+          <input type="text" name="content" placeholder="视频摘要" value="{$edit['content']}" />
+        </div>
+        <div class="adminformrow">
+          <label class="label">封面图片：</label>
+          <input type="file" name="theme" /><span>(建议填，可为空，会从默认里面选,最佳尺寸：280x246)</span>
+        </div>
+        <div class="adminformrow">
+          <label class="label">当前封面：</label>
+          <img src="{$edit['theme']}" height="50" />
+        </div>
+        <div class="adminformrow">
+          <input class="addnew" type="submit" value="<empty name="edit['id']">发布<else />更新</empty>" />
+        </div>
+      </form>
+    </div>
+<include file="./Tpl/Admin/f.html"/>
