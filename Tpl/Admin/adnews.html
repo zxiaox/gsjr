@@ -1,0 +1,36 @@
+<include file="./Tpl/Admin/h.html"/>
+    <include file="./Tpl/Admin/admin_nav.html"/>
+
+    <div class="content">
+      <p class="title">
+          轮播新闻管理
+      </p>
+      <div class="adnews">
+        <form action="/Admin/adnews" method="post" enctype="multipart/form-data">
+          <div class="adminformrow">
+            <label class="label">新闻标题：</label>
+            <input type="text" name="title" value="" placeholder="新闻标题">
+          </div>
+
+          <div class="adminformrow">
+            <label class="label">新闻链接：</label>
+            <input type="text" name="link" value="" placeholder="新闻链接">
+          </div>
+
+          <div class="adminformrow">
+            <label class="label">新闻图片：</label>
+            <input type="file" name="img" >
+          </div>
+          <div class="adminformrow">
+            <input class="addnew" type="submit" value="添加" />
+          </div>
+
+        </form>
+        <hr>
+        <volist name="adnews" id="adnews">
+          <img src="{$adnews['img']}" height="50" > {$adnews['title']} - {$adnews['link']} - <a href="/Admin/del?id={$adnews['id']}">删除</a> <br>
+        </volist>
+
+      </div>
+    </div>
+<include file="./Tpl/Admin/f.html"/>

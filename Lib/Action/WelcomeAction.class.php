@@ -5,6 +5,8 @@ class WelcomeAction extends Action {
     $newsdata2 = M('news')->where("hide = 0 and type_id = 2")->order('setorder desc,created_time desc')->limit(3)->select();
     $newsdata3 = M('news')->where("hide = 0 and type_id = 3")->order('setorder desc,created_time desc')->limit(3)->select();
 
+    $adnews = M('adnews')->order('id desc')->limit(3)->select();
+    $this->assign('adnews', $adnews);
     $this->assign('newsdata1', $newsdata1);
     $this->assign('newsdata2', $newsdata2);
     $this->assign('newsdata3', $newsdata3);
@@ -38,6 +40,8 @@ class WelcomeAction extends Action {
       $this->assign('list2',$newlist);// 赋值数据集
       $this->assign('page',$show);// 赋值分页输出
 
+      $adnews = M('adnews')->order('id desc')->limit(3)->select();
+      $this->assign('adnews', $adnews);
       $this->assign('newstype', $newstype);
       $this->display('allnews');
       return;
@@ -59,6 +63,9 @@ class WelcomeAction extends Action {
     }else{
       $anew = $newsdata[0];
     }
+    $adnews = M('adnews')->order('id desc')->limit(3)->select();
+    $this->assign('adnews', $adnews);
+
     $this->assign('anew', $anew);
     $this->assign('type', $type);
     $this->assign('newstype', $newstype[$type]);

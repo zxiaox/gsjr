@@ -2,30 +2,42 @@
   <!-- <img width="100%" src="/Common/i/newtop.png" /> -->
   <div id="newslides">
     <div class="slides_container tab-content">
-      <div class="tab-pannel">
-        <a href="/Welcome/news?type=1">
-          <img src="/Common/i/news1.jpg" >
-          <div class="title">
-            金融资本管理公司荣获“一带一路”金融合作与创新优秀企业案例奖
-          </div>
-        </a>
-      </div>
-      <div class="tab-pannel">
-        <a href="/Welcome/news?type=1">
-          <img src="/Common/i/news2.jpg" >
-          <div class="title">
-            甘肃省融资担保集团定西有限公司举行开业揭牌仪式
-          </div>
-        </a>
-      </div>
-      <div class="tab-pannel">
-        <a href="/Welcome/news?type=1">
-          <img src="/Common/i/news3.jpg" >
-          <div class="title">
-            集团公司督察组检查指导党建工作
-          </div>
-        </a>
-      </div>
+      <volist name="adnews" id="adnews">
+        <div class="tab-pannel">
+          <a href="{$adnews['link']}">
+            <img src="{$adnews['img']}" >
+            <div class="title">
+              {$adnews['title']}
+            </div>
+          </a>
+        </div>
+      </volist>
+      <empty name="adnews">
+        <div class="tab-pannel">
+          <a href="/Welcome/news?type=1">
+            <img src="/Common/i/news1.jpg" >
+            <div class="title">
+              金融资本管理公司荣获“一带一路”金融合作与创新优秀企业案例奖
+            </div>
+          </a>
+        </div>
+        <div class="tab-pannel">
+          <a href="/Welcome/news?type=1">
+            <img src="/Common/i/news2.jpg" >
+            <div class="title">
+              甘肃省融资担保集团定西有限公司举行开业揭牌仪式
+            </div>
+          </a>
+        </div>
+        <div class="tab-pannel">
+          <a href="/Welcome/news?type=1">
+            <img src="/Common/i/news3.jpg" >
+            <div class="title">
+              集团公司督察组检查指导党建工作
+            </div>
+          </a>
+        </div>
+      </empty>
     </div>
     <ul class="tab-nav pagination"></ul>
   </div>

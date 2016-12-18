@@ -76,6 +76,17 @@
         <div class="col col1">
           <div id="slides">
             <div class="slides_container tab-content">
+              <volist name="adnews" id="adnews">
+                <div class="tab-pannel">
+                  <a href="{$adnews['link']}">
+                    <img src="{$adnews['img']}" >
+                    <div class="title">
+                      {$adnews['title']}
+                    </div>
+                  </a>
+                </div>
+              </volist>
+              <empty name="adnews">
               <div class="tab-pannel">
                 <a href="/Welcome/news?type=1">
                   <img src="/Common/i/news1.jpg" >
@@ -100,6 +111,7 @@
                   </div>
                 </a>
               </div>
+              </empty>
             </div>
             <ul class="tab-nav pagination"></ul>
           </div>
@@ -159,7 +171,7 @@
         </div>
         <div class="col col3">
           <a href="/Welcome/news?type=2"><img src="/Common/i/neweg5.jpg" ></a>
-          <a href="/Welcome/news?type=3"><img src="/Common/i/neweg6.jpg" ></a> 
+          <a href="/Welcome/news?type=3"><img src="/Common/i/neweg6.jpg" ></a>
         </div>
       </div>
     </div>

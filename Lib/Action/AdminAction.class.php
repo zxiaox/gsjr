@@ -200,4 +200,33 @@ class AdminAction extends Action {
     }
 	  $this->display();
   }
+
+  public function adnews() {
+    $ad = M('adnews');
+    if($this->_post()){
+      $p = $this->_post();
+
+      $data = array();
+      $data['title'] = $p['title'];
+      $data['link'] = $p['link'];
+
+      $name = $_FILES['img']['name'];
+      $time = time();
+      $str = Date("YmdHis", $time);
+      $image_name = 'gs' . $p['id'] . '-' . $str . '.' . end(explode('.', $name));
+      $tmp = $_FILES['img']['tmp_name'];
+      if (move_uploaded_file($tmp, './AD/' . $image_name)) {
+        $data["img"] = '/AD/' . $image_name;
+        $ad->add($data);
+        //$this->success();
+      }
+    }
+    $adnews = $ad->order('id desc')->limit(3)->select();
+    $this->assign('adnews', $adnews);
+    $this->display();
+  }
+  public function del($id) {
+    M('adnews')->delete($id);
+    $this->redirect('/Admin/adnews');
+  }
 }
