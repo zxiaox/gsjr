@@ -601,6 +601,13 @@ body {
   text-align: center;
   position: relative;
 }
+.detail .content pre{
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
 .detail .klass {
   text-align: left;
   width: 90%;
@@ -661,7 +668,7 @@ body {
   text-indent: 2em;
 }
 .detail .content .title {
-  font-family:PingFangSC-Medium;
+  font-family:PingFangSC-Medium, microsoft yahei;
   font-size:18px;
   color:#4a4a4a;
   text-align: center;
@@ -787,6 +794,8 @@ body {
 }
 .newcenter .theme .right ul {
   padding-top: 5px;
+  height: 250px;
+  overflow: hidden;
 }
 .newcenter .theme .right li, .rel li
 {
