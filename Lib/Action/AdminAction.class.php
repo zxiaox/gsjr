@@ -19,7 +19,7 @@ class AdminAction extends Action {
     $this->assign('list',$list);// 赋值数据集
     $this->assign('page',$show);// 赋值分页输出
 
-    $news = M('news')->query('select gs_news.*,(SELECT user from gs_user where id = gs_news.created_by) as created_name, (SELECT user from gs_user where id = gs_news.updated_by) as updated_name from gs_news where hide = '. $hide .' order by setorder asc,created_time desc limit '.$Page->firstRow.',' .$Page->listRows);
+    $news = M('news')->query('select gs_news.*,(SELECT user from gs_user where id = gs_news.created_by) as created_name, (SELECT user from gs_user where id = gs_news.updated_by) as updated_name from gs_news where hide = '. $hide .' order by setorder desc,created_time desc limit '.$Page->firstRow.',' .$Page->listRows);
 
     //$newstype = M('newstype')->getField('type',true);
     $newstype = array('0'=> '集团动态','1'=> '党建工作','2'=> '行业资讯','3'=> '下载中心');

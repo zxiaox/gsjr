@@ -1,9 +1,9 @@
 <?php
 class WelcomeAction extends Action {
   public function index(){
-    $newsdata1 = M('news')->where("hide = 0 and type_id = 1")->order('setorder asc,created_time desc')->limit(3)->select();
-    $newsdata2 = M('news')->where("hide = 0 and type_id = 2")->order('setorder asc,created_time desc')->limit(3)->select();
-    $newsdata3 = M('news')->where("hide = 0 and type_id = 3")->order('setorder asc,created_time desc')->limit(3)->select();
+    $newsdata1 = M('news')->where("hide = 0 and type_id = 1")->order('setorder desc,created_time desc')->limit(3)->select();
+    $newsdata2 = M('news')->where("hide = 0 and type_id = 2")->order('setorder desc,created_time desc')->limit(3)->select();
+    $newsdata3 = M('news')->where("hide = 0 and type_id = 3")->order('setorder desc,created_time desc')->limit(3)->select();
 
     $this->assign('newsdata1', $newsdata1);
     $this->assign('newsdata2', $newsdata2);
@@ -31,8 +31,8 @@ class WelcomeAction extends Action {
       $count      = M('news')->where('hide=0'.$where)->count();// 查询满足要求的总记录数
       $Page       = new Page($count, 10);// 实例化分页类 传入总记录数和每页显示的记录数
       $show       = $Page->show();// 分页显示输出
-      $list = M('news')->where("hide = 0".$where)->order('setorder asc,created_time desc')->limit($Page->firstRow, $Page->listRows)->select();
-      $newlist = M('news')->where("hide = 0")->order('setorder asc,created_time desc')->limit(20)->select();
+      $list = M('news')->where("hide = 0".$where)->order('setorder desc,created_time desc')->limit($Page->firstRow, $Page->listRows)->select();
+      $newlist = M('news')->where("hide = 0")->order('setorder desc,created_time desc')->limit(20)->select();
       $this->assign('list',$list);// 赋值数据集
       $this->assign('list1',$newlist);// 赋值数据集
       $this->assign('list2',$newlist);// 赋值数据集
@@ -47,7 +47,7 @@ class WelcomeAction extends Action {
       $type = (int)$get['type'];
     }
 
-    $newsdata = M('news')->where("hide = 0 and type_id = $type")->order('setorder asc,created_time desc')->limit(10)->select();
+    $newsdata = M('news')->where("hide = 0 and type_id = $type")->order('setorder desc,created_time desc')->limit(10)->select();
     if($get['id']){
       $id = (int)$get['id'];
       $anew = M('news')->find($id);
