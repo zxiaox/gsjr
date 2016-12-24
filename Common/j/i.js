@@ -54,5 +54,14 @@ $(function(){
   $('.description a').click(function(){
     $('.hrs').hide();
     $('.hr' + ($(this).parent().index() + 4)).show();
-  })
+  });
+  $('.videobox').click(function(){
+    var o = $(this).attr('data-href');
+    if(!~o.indexOf('java')){
+      $('.v')
+      .html(o)
+      .css('top', $(this).offset().top + $(this).height() - $('.video').offset().top + 20)
+      .show();
+    }
+  });
 });

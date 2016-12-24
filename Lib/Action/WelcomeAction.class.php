@@ -43,6 +43,7 @@ class WelcomeAction extends Action {
       $adnews = M('adnews')->order('id desc')->limit(3)->select();
       $this->assign('adnews', $adnews);
       $this->assign('newstype', $newstype);
+      $this->assign('news', 'cur');
       $this->display('allnews');
       return;
     }
