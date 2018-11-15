@@ -22,7 +22,7 @@ class AdminAction extends Action {
     $news = M('news')->query('select gs_news.*,(SELECT user from gs_user where id = gs_news.created_by) as created_name, (SELECT user from gs_user where id = gs_news.updated_by) as updated_name from gs_news where hide = '. $hide .' order by setorder desc,created_time desc limit '.$Page->firstRow.',' .$Page->listRows);
 
     //$newstype = M('newstype')->getField('type',true);
-    $newstype = array('0'=> '集团动态','1'=> '党建工作','2'=> '行业资讯','3'=> '下载中心');
+    $newstype = array('0'=> '集团动态','1'=> '党建工作','2'=> '行业资讯','3'=> '下载中心','4'=> '子公司动态');
     $this->assign('news',$news);
     $this->assign('newstype',$newstype);
     $this->assign('hide',$hide);
@@ -59,6 +59,8 @@ class AdminAction extends Action {
         $this->assign('edit', $edit);
       }
     }
+    $count = M('news')->count();
+    $this->assign('count', $count+1);
 	  $this->display();
   }
 
@@ -221,7 +223,8 @@ class AdminAction extends Action {
         //$this->success();
       }
     }
-    $adnews = $ad->order('id desc')->limit(3)->select();
+    $adnews = $ad->order('id desc')->limit(5)->select();
+	$adnews = array_reverse($adnews);
     $this->assign('adnews', $adnews);
     $this->display();
   }

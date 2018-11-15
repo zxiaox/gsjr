@@ -12,7 +12,7 @@
         <input type="hidden" value="{$edit['id']}" name="id" />
         <div class="adminformrow">
           <label class="label">设置排序：</label>
-          <input type="number" name="setorder" placeholder="值越大越靠前" value="{$edit['setorder'] ? $edit['setorder'] : 99 }" /><span>(值越大越靠前)</span>
+          <input type="number" name="setorder" placeholder="值越大越靠前" value="{$edit['setorder'] ? $edit['setorder'] : $count }" /><span>(值越大越靠前,默认设置目前最大)</span>
         </div>
         <div class="adminformrow">
           <label class="label">新闻标题：</label>
@@ -26,6 +26,7 @@
           <label class="label">新闻分类：</label>
           <select name="newstype">
             <option value="1" <eq name="edit['type_id']" value="1">selected</eq>>集团动态</option>
+            <option value="5" <eq name="edit['type_id']" value="5">selected</eq>>子公司动态</option>
             <option value="2" <eq name="edit['type_id']" value="2">selected</eq>>党建工作</option>
             <option value="3" <eq name="edit['type_id']" value="3">selected</eq>>行业资讯</option>
             <option value="4" <eq name="edit['type_id']" value="4">selected</eq>>下载中心</option>

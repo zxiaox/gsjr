@@ -1,15 +1,18 @@
 <?php
 class WelcomeAction extends Action {
   public function index(){
-    $newsdata1 = M('news')->where("hide = 0 and type_id = 1")->order('setorder desc,created_time desc')->limit(3)->select();
-    $newsdata2 = M('news')->where("hide = 0 and type_id = 2")->order('setorder desc,created_time desc')->limit(3)->select();
-    $newsdata3 = M('news')->where("hide = 0 and type_id = 3")->order('setorder desc,created_time desc')->limit(3)->select();
+    $newsdata1 = M('news')->where("hide = 0 and type_id = 1")->order('setorder desc,created_time desc')->limit(4)->select();
+    $newsdata2 = M('news')->where("hide = 0 and type_id = 2")->order('setorder desc,created_time desc')->limit(4)->select();
+    $newsdata3 = M('news')->where("hide = 0 and type_id = 3")->order('setorder desc,created_time desc')->limit(4)->select();
+    $newsdata4 = M('news')->where("hide = 0 and type_id = 5")->order('setorder desc,created_time desc')->limit(4)->select();
 
-    $adnews = M('adnews')->order('id desc')->limit(3)->select();
+    $adnews = M('adnews')->order('id desc')->limit(5)->select();
+	$adnews = array_reverse($adnews);
     $this->assign('adnews', $adnews);
     $this->assign('newsdata1', $newsdata1);
     $this->assign('newsdata2', $newsdata2);
     $this->assign('newsdata3', $newsdata3);
+    $this->assign('newsdata4', $newsdata4);
   	$this->display();
   }
   public function work(){
@@ -23,7 +26,8 @@ class WelcomeAction extends Action {
   }
   public function news(){
     $get = $this->_get();
-    $newstype = array('1'=> '公司动态','2'=> '党建工作','3'=> '行业资讯','4'=> '下载中心');
+    // $newstype = array('1'=> '公司动态','2'=> '党建工作','3'=> '行业资讯','4'=> '下载中心');
+    $newstype = array('1'=> '集团动态','2'=> '党建工作','3'=> '行业资讯','4'=> '下载中心','5'=> '子公司动态');
     if($get['src'] == 'all'){
       $where = '';
       if($get['type']){
@@ -40,7 +44,8 @@ class WelcomeAction extends Action {
       $this->assign('list2',$newlist);// 赋值数据集
       $this->assign('page',$show);// 赋值分页输出
 
-      $adnews = M('adnews')->order('id desc')->limit(3)->select();
+      $adnews = M('adnews')->order('id desc')->limit(5)->select();
+	  $adnews = array_reverse($adnews);
       $this->assign('adnews', $adnews);
       $this->assign('newstype', $newstype);
       $this->assign('news', 'cur');
@@ -64,7 +69,8 @@ class WelcomeAction extends Action {
     }else{
       $anew = $newsdata[0];
     }
-    $adnews = M('adnews')->order('id desc')->limit(3)->select();
+    $adnews = M('adnews')->order('id desc')->limit(5)->select();
+	$adnews = array_reverse($adnews);
     $this->assign('adnews', $adnews);
 
     $this->assign('anew', $anew);
@@ -83,7 +89,7 @@ class WelcomeAction extends Action {
       if($get['type'] == 7) {
         $storys = M('storys');
         $story1 = $storys->where("hide = 0 and type_id = 1")->order('setorder asc,updated_time desc')->limit(3)->select();
-        $story2 = $storys->where("hide = 0 and type_id = 2")->order('setorder asc,updated_time desc')->limit(3)->select();
+        $story2 = $storys->where("hide = 0 and type_id = 2")->order('setorder asc,updated_time desc')->limit(2)->select();
         $story3 = $storys->where("hide = 0 and type_id = 3")->order('setorder asc,updated_time desc')->limit(3)->select();
         $this->assign('story1', $story1);
         $this->assign('story2', $story2);

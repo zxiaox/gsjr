@@ -2,45 +2,63 @@
 <div id="banners">
   <div id="slidesBanner">
     <div class="slides_container tab-content">
-      <div class="tab-pannel">
+
+	<div class="tab-pannel">
         <div class="posterBox">
-          <div class="w1190 poster">
-            <p>让小微企业融资更简单</p>
-            <a href="/Welcome/work?type=7">立即查看</a>
+          <div class="w11901">
+            <a href="" id="poster1"><img src="../Common/i/banner7.jpg" /></a>
           </div>
         </div>
       </div>
+
+	<div class="tab-pannel">
+        <div class="posterBox">
+          <div class="w11901">
+            <a href="" id="poster1"><img src="../Common/i/banner5.png" /></a>
+          </div>
+        </div>
+      </div>
+	  
+	 <div class="tab-pannel">
+        <div class="posterBox">
+          <div class="w11901">
+            <a href="" id="poster1"><img src="../Common/i/banner6.png" /></a>
+          </div>
+        </div>
+      </div>
+
+
+
+
       <div class="tab-pannel">
         <div class="posterBox">
           <div class="w11901">
-            <a href="" id="poster1"><img src="../Common/i/banner3.jpg" /></a>
+            <a href="" id="poster2"><img src="../Common/i/banner3.jpg" /></a>
           </div>
         </div>
       </div>
+
       <div class="tab-pannel">
         <div class="posterBox">
           <div class="w11901">
-            <a href="" id="poster2"><img src="../Common/i/banner2.jpg" /></a>
+            <a href="javascript:;" id="poster2"><img src="../Common/i/banner4.jpg" /></a>
           </div>
         </div>
       </div>
-      <div class="tab-pannel">
-        <div class="posterBox">
-          <div class="w11901">
-            <a href="" id="poster2"><img src="../Common/i/banner4.jpg" /></a>
-          </div>
-        </div>
-      </div>
+
+
     </div>
     <ul class="tab-nav pagination"></ul>
   </div>
-</div>
-
-  <div id="subnav">
+   <div id="subnav">
     <div class="w1190 clearfix subnav">
       <a href="/Welcome/work?type=7">
         <p class="title">融资担保</p>
         <p class="desc">西北地区第一信用担保</p>
+      </a>
+           <a href="/Welcome/work?type=8">
+        <p class="title">产权交易</p>
+        <p class="desc">全国首批 西北第一</p>
       </a>
       <a href="/Welcome/work?type=6">
         <p class="title">小额贷款</p>
@@ -56,22 +74,34 @@
       </a>
       <a href="/Welcome/work?type=3">
         <p class="title">典当业务</p>
-        <p class="desc">一流典当，行业标杆</p>
+        <p class="desc">一流典当 行业标杆</p>
+      </a>
+          <a href="/Welcome/work?type=1">
+        <p class="title">投资基金</p>
+        <p class="desc">联通政府与市场的平台</p>
       </a>
       <a href="/Welcome/work?type=2">
         <p class="title">金融仓储</p>
         <p class="desc">西北首家标准金融仓储</p>
       </a>
-      <a href="/Welcome/work?type=1">
-        <p class="title">投资基金</p>
-        <p class="desc">联通政府与市场的平台</p>
+          <a href="/Welcome/work?type=9">
+        <p class="title">融资租赁</p>
+        <p class="desc">产融结合 服务实体</p>
       </a>
+      <a href="/Welcome/work?type=10">
+        <p class="title">商业保理</p>
+        <p class="desc">西北首家标准商业保理</p>
+      </a>
+
     </div>
   </div>
 
+</div>
+
+
   <div class="leg">
     <div class="w1190 bd">
-      <p class="title">新闻中心</p>
+      <p class="title">新闻中心</p>  <!-- 新闻中心 -->
       <div class="news clearfix">
         <div class="col col1">
           <div id="slides">
@@ -154,18 +184,27 @@
         </div>
         <div class="col col2">
           <div class="row row0">
+			      <span><a style="font-size:15px;" href="http://www.gsjrzb.cn/Welcome/news?src=all&type=1">公司动态</a> </span>
             <volist id="newsdata1" name="newsdata1">
-              <p class="desc"><a href="/Welcome/news?id={$newsdata1['id']}&type=1"><span>【公司动态】</span>{$newsdata1['title']}</a></p>
+              <p class="desc"><a style="font-size:13px;" href="/Welcome/news?id={$newsdata1['id']}&type=1">•&nbsp;&nbsp;{$newsdata1['title']}</a></p>
             </volist>
           </div>
           <div class="row row1">
-            <volist id="newsdata2" name="newsdata2">
-              <p class="desc"><a href="/Welcome/news?id={$newsdata2['id']}&type=2"><span>【党建工作】</span>{$newsdata2['title']}</a></p>
+            <span><a style="font-size:15px;" href="http://www.gsjrzb.cn/Welcome/news?src=all&type=5">子公司动态</a></span>
+            <volist id="newsdata4" name="newsdata4">
+              <p class="desc"><a style="font-size:13px;" href="/Welcome/news?id={$newsdata4['id']}&type=5">•&nbsp;&nbsp;{$newsdata4['title']}</a></p>
             </volist>
           </div>
-          <div class="row row2">
+          <div class="row row1">
+            <span><a style="font-size:15px;" href="http://www.gsjrzb.cn/Welcome/news?src=all&type=2">党建工作</a></span>
+            <volist id="newsdata2" name="newsdata2">
+              <p class="desc"><a style="font-size:13px;" href="/Welcome/news?id={$newsdata2['id']}&type=2">•&nbsp;&nbsp;{$newsdata2['title']}</a></p>
+            </volist>
+          </div>
+          <div class="row row2" style="display:none;">
+             <span><a style="font-size:14px;" href="http://www.gsjrzb.cn/Welcome/news?src=all&type=3">行业资讯</a></span>
             <volist id="newsdata3" name="newsdata3">
-              <p class="desc"><a href="/Welcome/news?id={$newsdata3['id']}&type=3"><span>【行业资讯】</span>{$newsdata3['title']}</a></p>
+              <p class="desc"><a href="/Welcome/news?id={$newsdata3['id']}&type=3">•&nbsp;&nbsp;{$newsdata3['title']}</a></p>
             </volist>
           </div>
         </div>
@@ -206,7 +245,16 @@
             <p class="desc"></p>
           </div>
           <div class="img" style="background-image:url(/Common/i/s51.png);"></div>
-          <p class="desc">诉讼保函：甘肃省高院唯一备案准入的融资性担保机构，提供全省最正规且具备权威性的保函业务服务。工程保函：可在全国范围内开具工程履约保函、招投标保函、预付款保函等，支持诉讼保全担保及委托贷款业务。</p>
+          <p class="desc">诉讼保函：甘肃省高院唯一备案准入的融资性担保机构，提供全省最正规且具备权威性的保函业务服务。<br>工程保函：可在全国范围内开具工程履约保函、招投标保函、预付款保函等，支持诉讼保全担保及委托贷款业务。</p>
+        </a>
+		<a class="service" href="http://www.gscq.com.cn/">
+          <div class="title">
+            <img src="/Common/i/s1.png">
+            <p class="title">产权交易</p>
+            <p class="desc"></p>
+          </div>
+          <div class="img" style="background-image:url(/Common/i/s511.png);"></div>
+          <p class="desc">甘肃省产权交易所是经省政府和国家清理整顿部际联席会议批准保留的全省唯一一家从事国有资产流转和股权融资服务的综合类产权交易机构，成交规模长期以来位列全国第九位，西北第一，经过多年发展，形成了“国资全覆盖、品种全展开”的经营格局。</p>
         </a>
       </div>
     </div>
@@ -221,9 +269,14 @@
       <div class="we">
         <div class="clearfix">
           <!--<img src="/Common/i/snav.png">-->
-          <a href="/Welcome/us?type=2" style="background-image:url(/Common/i/1.png);">
+          <a href="/Welcome/us?type=9" style="background-image:url(/Common/i/1.png);">
+            <p>董事长寄语</p>
+            <p>筚路蓝缕，我们砥砺前行探索六载春秋；栉风沐雨，我们披荆斩棘开创辉煌事业。</p>
+            <div class="abouta">查看详情</div>
+          </a>
+          <a href="/Welcome/us?type=2" style="background-image:url(/Common/i/3.png);">
             <p>公司概况</p>
-            <p>甘肃省金融资本管理有限公司注册资本30亿元，是甘肃省金融领域业务范围涵盖最广的综合性金融控股公司。</p>
+            <p>甘肃省金融资本管理有限公司注册资本50亿元，是甘肃金融领域业务范围涵盖最广、实力最强的综合性金融控股集团。</p>
             <div class="abouta">查看详情</div>
           </a>
           <a href="/Welcome/us?type=3" style="background-image:url(/Common/i/2.png);">
@@ -231,14 +284,10 @@
             <p>以人力资源为核心资源，着力打造智力集聚的盆地、人才成长的高地。</p>
             <div class="abouta">查看详情</div>
           </a>
-          <a href="/Welcome/us?type=4" style="background-image:url(/Common/i/3.png);">
-            <p>发展历程</p>
-            <p>砥砺前行探索五载春秋，栉风沐雨，我们披荆斩棘开创辉煌事业。</p>
-            <div class="abouta">查看详情</div>
-          </a>
+
           <a href="/Welcome/us?type=5" style="background-image:url(/Common/i/4.png);">
             <p>公司文化</p>
-            <p>企业愿景：中国西北第一品牌综合融资方案解决商<br>企业精神：专业 合作 务实 卓越</p>
+            <p>企业愿景：西部一流金融集团<br>企业精神：专业 合作 务实 卓越</p>
             <div class="abouta">查看详情</div>
           </a>
           <a href="/Welcome/hr" style="background-image:url(/Common/i/5.png);">
@@ -256,16 +305,188 @@
   <div class="partner">
     <div class="w1190 bd">
       <p class="title">合作伙伴</p>
+<body>
+
+
+<div class="wrap w1190">
+	<div id="lunbo" style="position: relative; width: 1190px; height: 280px; margin: 0px auto;">
+		<ul class="list">
+			<li style="display: none; position: absolute; left: 0px; width: 1190px; height: 280px;"><a href="javascript:;"><img src="../Common/i/partner-1.jpg" alt="" style="width: 100%; height: 100%;"></a></li>
+			<li style="display: none; position: absolute; left: 0px; width: 1190px; height: 280px;"><a href="javascript:;"><img src="../Common/i/partner-2.jpg" alt="" style="width: 100%; height: 100%;"></a></li>
+			<li style="display: none; position: absolute; left: 0px; width: 1190px; height: 280px;"><a href="javascript:;"><img src="../Common/i/partner-3-1.jpg" alt="" style="width: 100%; height: 100%;"></a></li>
+
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+	;(function($,window,document,undefined){
+		var Inits = function(ele,opts){
+			this.$ele = ele,
+			this.defaults = {
+				_width: 1190, //设置图轮播图大小
+				_height: 280,
+				page: 'page', //是否启用导航图标,有值时启用，值为导航图标列表的样式类，为空时不启用导航列表
+				btn: true, //是否启用上下一页按钮，true为启用,false或者空为不启用。如果启用，请在下面的四个属性中赋值，为按钮添加样式类和按钮文字
+				nextClass: 'next', //下一张 按钮样式类
+				prevClass: 'prev',	//上一张 按钮样式类
+				nextText: '下一张',
+				prevText: '上一张',
+				fade: 'normal', //图片切换速度 可能的值slow/normal/fast/毫秒(比如 1500)
+				time: '', //可能的值(毫秒)1000\2000...
+				pageNum: false, //是否启用数字做轮播导航 true为启用,false不启用
+				pagelocat: true //轮播导航图标是否要居中 true/fasle 默认为居中
+			},
+			this.init = $.extend({}, this.defaults, opts);
+		}
+		Inits.prototype = {
+			slideFade: function(){
+				var ul = this.$ele.children('ul.list');
+				var li = ul.children('li');
+				li.eq(0).show().siblings('li').hide();
+				var init = this.init;
+				//slide
+				this.$ele.css({
+					position: 'relative',
+					width: init._width+'px',
+					height: init._height+'px',
+					margin: '0 auto'
+				});
+				li.css({
+					position: 'absolute',
+					left: 0,
+					width: init._width+'px',
+					height: init._height+'px'
+				});
+				li.find('img').css({
+					width: '100%',
+					height: '100%'
+				});
+				//page==buiding
+				if (init.page!=''&&init.page!=undefined) {
+					this.$ele.append('<ul class="'+init.page+'"></ul>');
+					// buiding-page
+					for (var i = 0; i < li.length; i++) {
+						if (init.pageNum==true) {
+							$('.'+init.page).append('<li>'+(i+1)+'</li>');
+						}else if(init.pageNum==false){
+							$('.'+init.page).append('<li>&nbsp;</li>');
+						}
+					};
+					var page = $('.'+init.page);
+					var pageli = page.children('li');
+						pageli.css('float', 'left');
+					var pageliw = Math.ceil(pageli.outerWidth(true)+0.05)*pageli.length;
+					var pagetoleft = init._width/2-pageliw/2;
+					pageli.eq(0).addClass('on');
+					page.css({
+						position: 'absolute',
+						width: pageliw+'px'
+					});
+					if (init.pagelocat==true) {
+						page.css('left', pagetoleft+'px');
+					};
+				};
+				//btn==buiding
+				if (init.btn==true) {
+					this.$ele.append('<a href="javascript:;" class="sBtn">'+init.prevText+'</a><a href="javascript:;" class="sBtn">'+init.nextText+'</a>');
+					var btntotop = Math.round(init._height/2-this.$ele.children('a.sBtn').height()/2);
+					this.$ele.children('a.sBtn').css({
+						position: 'absolute',
+						top: btntotop+'px'
+					});
+					if (init.nextClass!=''||init.prevClass!='') {
+						this.$ele.children('a.sBtn').eq(0).addClass(init.prevClass).next('a.sBtn').addClass(init.nextClass);
+					}
+				};
+				//==========
+				var i = 0;
+				var next = function(fade){
+					li.eq(i).fadeOut(fade).next().fadeIn(fade);
+					page && page.children('li').eq(i).removeClass('on').next().addClass('on');
+					i++;
+					if (i>li.length-1) {
+						i=0;
+						li.eq(i).fadeIn(fade);
+						page && page.children('li').eq(i).addClass('on');
+					}
+				};
+				var prev = function(fade){
+					console.log(li.length);
+
+					if (i==0) {
+						i=li.length-1;
+						li.eq(0).fadeOut(fade);
+						li.eq(i).fadeIn(fade);
+						page && page.children('li').eq(0).removeClass('on');
+						page && page.children('li').eq(i).addClass('on');
+					}else{
+						li.eq(i).fadeOut(fade).prev().fadeIn(fade);
+						page && page.children('li').eq(i).removeClass('on').prev().addClass('on');
+						i--;
+					}
+				}
+				//下一张
+				$('.next').click(function(event) {
+					next(init.fade);
+				});
+				//上一张
+				$('.prev').click(function(event) {
+					prev(init.fade);
+				});
+				// 是否自动轮播
+				if (init.time!=''&&init.time!=undefined) {
+					var timeRun = setInterval(next,init.time);
+					//鼠标经过图片
+					li.each(function(index, el) {
+						$(this).mouseover(function(event) {
+							clearInterval(timeRun);
+						}).mouseout(function(event) {
+							timeRun = setInterval(next,init.time);
+						});
+					});
+				};
+				if (init.page!=''&&init.page!=undefined) {
+					//点击导航图标
+					pageli.each(function(index, el) {
+						$(this).click(function(event) {
+							console.log(index);
+							i=index;
+							console.log(i);
+							li.eq(i).fadeIn(init.fade).siblings('li').fadeOut(init.fade);
+							page.children('li').eq(i).addClass('on').siblings('li').removeClass('on');
+						});
+					});
+				};
+			}//slideFade end
+		}
+		// 插件中调用
+		$.fn.MdsSlideFade = function(opts){
+			var inits = new Inits(this,opts);
+			return inits.slideFade();
+		}
+
+	})(jQuery, window, document);
+
+	$('#lunbo').MdsSlideFade({
+		page: '',time: '3000',btn: false
+	});
+</script>
+
+
+</body>
       <div></div>
     </div>
   </div>
 
   <div class="biz">
     <div class="w1190 bd">
-      <p class="title">业务系统</p>
-      <div>
-        <a href="http://mail.ghatg.com/"></a>
-        <a href="http://120.76.152.103:9088/cas/login"></a>
+      <p class="title">统一门户</p>
+	  <div>
+        <a href="http://pt.im2x.com/loginnew?gotoUrl=http%3A%2F%2Fm.haotuandui.com%3FignorePersonal%3DignorePersonal%26to%3D" target="_blank"></a>
+        <a href="http://sys.gsjrzb.cn:9088/portal" target="_blank"></a>
+		<a href="http://www.gsxt.gov.cn/index.html" target="_blank"></a>
+		<a href="http://zhixing.court.gov.cn/search/" target="_blank"></a>
       </div>
     </div>
   </div>

@@ -10,9 +10,10 @@
      </div>
      <ul class="clearfix">
        <li><a href="/Welcome/us">股东背景</a></li>
+       <li><a href="/Welcome/us?type=9">董事长寄语</a></li>
        <li><a href="/Welcome/us?type=2">公司概况</a></li>
        <li><a href="/Welcome/us?type=3">管理团队</a></li>
-       <li><a href="/Welcome/us?type=4">发展历程</a></li>
+       <!-- <li><a href="/Welcome/us?type=4">发展历程</a></li> -->
        <li><a href="/Welcome/us?type=5">公司文化</a></li>
        <!-- <li><a href="/Welcome/us?type=6">公司荣誉</a></li> -->
        <li class="cur"><a href="/Welcome/us?type=7">成长故事</a></li>
@@ -28,7 +29,7 @@
            <volist id="mys" name="story1" key="key1">
              <a class="mys" href="/Welcome/story?id={$mys['id']}">
                <img class="theme" src="<empty name="mys['theme']">/Common/i/sdflt{$key1 + 1}.jpg<else/>{$mys['theme']}</empty>">
-               <p class="title">{$mys['title']}</p>
+               <p class="title" style="font-size:18px">{$mys['title']}</p>
                <p class="author">作者：{$mys['author']}</p>
                <p class="desc">{$mys['content']|strip_tags}</p>
              </a>
@@ -39,7 +40,7 @@
            <volist id="yours" name="story2" key="key2">
              <a class="yours" href="/Welcome/story?id={$yours['id']}">
                <img class="theme" src="<empty name="yours['theme']">/Common/i/sdflt{$key2 + 1}.jpg<else/>{$yours['theme']}</empty>">
-               <p class="title">{$yours['title']}</p>
+               <p class="title" style="font-size:18px">{$yours['title']}</p>
                <p class="author">作者：{$yours['author']}</p>
                <p class="desc">{$yours['content']|strip_tags}</p>
              </a>
@@ -50,7 +51,7 @@
            <volist id="ours" name="story3" key="key3">
              <a class="ours" href="/Welcome/story?id={$ours['id']}">
                <img class="theme" src="<empty name="ours['theme']">/Common/i/sdflt{$key3 + 1}.jpg<else/>{$ours['theme']}</empty>">
-               <p class="title">{$ours['title']}</p>
+               <p class="title" style="font-size:18px">{$ours['title']}</p>
                <p class="author">作者：{$ours['author']}</p>
                <p class="desc">{$ours['content']|strip_tags}</p>
              </a>

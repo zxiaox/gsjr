@@ -40,7 +40,7 @@
         <img src="/Common/i/ab.png" />
         <p class="sub_title">最新动态</p>
         <ul>
-          <volist id="newsdata2" name="newsdata2">
+          <volist id="newsdata2" name="newsdata2" offset="0" length="5">
             <li><a href="/Welcome/news?id={$newsdata2['id']}&type={$type}">{$newsdata2["title"]}</a></li>
           </volist>
         </ul>

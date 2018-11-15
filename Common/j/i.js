@@ -26,6 +26,13 @@ $(function(){
     $(this).addClass('cur');
   });
   $('.year a').click(function(){
+    $(this).siblings().removeClass('curyear');
+    $(this).addClass('curyear');
+    $('.tyear').attr('class','tyear');
+    $('.tyear').addClass('t201'+ ($(this).index() + 2));
+    $('.yearbox').hide();
+    $('.box201' + ($(this).index() + 2)).show();
+    return;
     $('.year').attr('class','year');
     $('.year').addClass('year201'+ ($(this).index() + 2));
     $('.tyear').attr('class','tyear');
